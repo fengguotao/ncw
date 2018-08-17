@@ -1,0 +1,127 @@
+/* pages/billBoard/billBoard.wxss */
+
+page {
+    background: #ed483f
+}
+
+.conter {
+    height: 100%;
+    width: 100%;
+    background-image: url(http://api.nuochewang.net/wximages/phb_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 380rpx 5% 0 5%;
+    box-sizing: border-box;
+    /*  */
+}
+
+.list {
+    width: 100%;
+    background: #FFFFFF;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+}
+
+.top {
+    height: 320rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+.left,
+.center,
+.right {
+    flex-basis: 33.33333%;
+}
+
+.left .icon,
+.right .icon {
+    height: 118rpx;
+    width: 126rpx;
+    margin-left: 35%;
+    margin-top: 40rpx
+}
+
+.center .icon {
+    height: 131rpx;
+    width: 132rpx;
+    margin-left: 30%;
+    margin-top: 40rpx;
+    margin-bottom: 47rpx
+}
+
+.center {
+    margin-top: -60rpx;
+    background-image: url(http://api.nuochewang.net/wximages/phgtop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.user-name {
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 32rpx;
+    color: #666666;
+    text-align: center
+}
+
+.user-card {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
+    color: #666666;
+    text-align: center
+}
+
+.user-pice {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 36rpx;
+    color: #333333;
+    text-align: center
+}
+
+.thead {
+    height: 60rpx;
+    width: 100%;
+    background: #eceef3;
+    display: flex;
+    align-items: center;
+    color: #999999;
+    font-size: 32rpx
+}
+
+.td-1 {
+    flex-basis: 20%;
+    text-align: center
+}
+
+.td-2 {
+    flex-basis: 25%;
+    text-align: center
+}
+
+.td-3 {
+    flex-basis: 25%;
+    text-align: center
+}
+
+.td-4 {
+    flex-basis: 30%;
+    text-align: center
+}
+
+.tbody {
+    height: 96rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    color: #666666;
+    font-size: 34rpx;
+    border-bottom: 1rpx solid #EEEEEE
+}

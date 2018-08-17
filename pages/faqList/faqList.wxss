@@ -1,0 +1,80 @@
+/* pages/faqList/faqList.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.scroll-view {
+  width: 100%;
+  height: 100%;
+  border-top: 1rpx solid #eeeeee;
+  background-color: #f7f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.backline{
+  width: 100%;
+  height: 12rpx;
+  background: #F7F6F6;
+} 
+.fqa-title{
+  width: 100%;
+  background: #FFFFFF;
+  height: 94rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.title{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #262626;
+  letter-spacing: -0.83rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.open-more, .more{
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.more::after{
+  content: " ";
+  display: inline-block;
+  height: 14rpx;
+  width: 14rpx;
+  border-width:  0 4rpx 4rpx 0;
+  border-color: rgba(171, 171, 171, 1);
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: relative;
+  top: -8rpx;
+}
+.open-more::after{
+  content: " ";
+  display: inline-block;
+  height: 14rpx;
+  width: 14rpx;
+  border-width: 4rpx 0 0 4rpx;
+  border-color: rgba(171, 171, 171, 1);
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: relative;
+  top: -4rpx;
+}
+.fqa-contet{
+  width: 100%;
+  background: #FFFFFF;
+  padding: 0 40rpx 20rpx 40rpx;
+  font-size: 28rpx;
+  color: #969696;
+  line-height: 42rpx;
+  word-wrap:break-word;
+  box-sizing: border-box;
+  
+}

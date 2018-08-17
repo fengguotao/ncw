@@ -1,0 +1,11 @@
+<!--pages/faqList/faqList.wxml-->
+<scroll-view class="scroll-view" scroll-y="true">
+    <block wx:for="{{FQAList}}" wx:key="item">
+        <view class="backline"></view>
+        <view class="fqa-title" id="{{ item.id }}" bindtap="openFqa">
+            <view class="title">{{item.question}}</view>
+            <!-- <view class="more {{item.chack?'open-more':''}}"></view> -->
+        </view>
+        <view class="fqa-contet" hidden="{{!item.chack}}">{{item.answer}}</view>
+    </block>
+</scroll-view>

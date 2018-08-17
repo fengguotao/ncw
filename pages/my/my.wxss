@@ -1,0 +1,113 @@
+/* pages/my/my.wxss */
+
+page {
+    background: rgb(236, 238, 243)
+}
+
+.top {
+    width: 100%;
+    height: 400rpx;
+    background-image: url(http://api.nuochewang.net/wximages/next_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center
+}
+
+.userinfo {
+    position: relative;
+    width: 750rpx;
+    height: 320rpx;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    overflow: hidden;
+    display: block;
+    width: 160rpx;
+    height: 160rpx;
+    margin: 20rpx;
+    margin-top: 50rpx;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tab {
+    width: 90%;
+    margin-left: 5%;
+    height: 160rpx;
+    background: #FFFFFf;
+    margin-top: -80rpx;
+    border-radius: 8rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.left,
+.right {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column
+}
+
+.one,
+.two {
+    width: 100%;
+    text-align: center;
+    height: 40rpx;
+    line-height: 40rpx;
+    color: #3b5998;
+    font-size: 34rpx
+}
+
+.two {
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #333333;
+}
+
+.item-list {
+    margin-top: 50rpx
+}
+
+.item {
+    height: 96rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.item-left {
+    flex-basis: 20%;
+    text-align: center
+}
+
+.item-left image {
+    height: 40rpx;
+    width: 40rpx
+}
+
+.item-right {
+    flex-basis: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333333;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #eeeeee
+}
+
+.item-right image {
+    height: 40rpx;
+    width: 40rpx;
+    margin-right: 30rpx;
+}

@@ -1,0 +1,45 @@
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
+<view class="conter">
+    <view class="big-text">
+        <image src="/images/index_icon7.png"></image>
+    </view>
+    <view class="num">
+        <block wx:for="{{itemArr}}" wx:key="item">
+            <view class="numItme">
+                <image src="/images/index_icon5.png"></image>
+                <view class="num-text"><text>{{item}}</text></view>
+            </view>
+        </block>
+    </view>
+    <view class="car-owner">
+        车主的选择
+    </view>
+    <view class="btn">
+        <button form-type="submit" hover-class="none" bindtap="e_scanCode">领取我的挪车码</button>
+    </view>
+    <view class="experience">
+        线上体验
+    </view>
+    <view class="flow">
+        <view class="box">
+            <view class="top">
+                <view class="line"></view>
+                <view>挪车步骤</view>
+                <view class="line"></view>
+            </view>
+            <view class="content">
+                <image src="/images/index_icon6.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="yellow-text">
+        智慧城市, 文明停车
+    </view>
+    <view class="explain">
+        挪车网您的用车好帮手
+    </view>
+    <view class="explain">
+        隐私保护 / 安全便捷 / 沟通及时
+    </view>
+</view>

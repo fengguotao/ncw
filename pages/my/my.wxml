@@ -1,0 +1,51 @@
+<!--pages/my/my.wxml-->
+<view class="top">
+    <view class="userinfo">
+        <view class="userinfo-avatar">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <open-data type="userNickName"></open-data>
+    </view>
+</view>
+<view class="tab">
+    <view class="left">
+        <view class="one">0</view>
+        <view class="two">订单</view>
+    </view>
+    <view class="right">
+        <view class="one">0</view>
+        <view class="two">挪车码/张</view>
+    </view>
+</view>
+<view class="item-list">
+    <view class="item">
+        <view class="item-left">
+            <image src="/images/me_icon1.png"></image>
+
+        </view>
+        <view class="item-right">
+            <view>邀请好友</view>
+            <image src="/images/me_icon4.png"></image>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item-left">
+            <image src="/images/me_icon2.png"></image>
+
+        </view>
+        <view class="item-right" bindtap="openFqa">
+            <view>常见问题</view>
+            <image src="/images/me_icon4.png"></image>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item-left">
+            <image src="/images/me_icon3.png"></image>
+
+        </view>
+        <view class="item-right">
+            <view>联系客服</view>
+            <!-- <image src="/images/me_icon4.png"></image> -->
+        </view>
+    </view>
+</view>
