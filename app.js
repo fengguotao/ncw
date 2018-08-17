@@ -14,6 +14,7 @@ App({
         //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
         //   }
         // })
+        // 登录名  nuochewang@126.com  密码ncw123456
         // 47.106.243.51
         // root
         // 123qwe~!@
