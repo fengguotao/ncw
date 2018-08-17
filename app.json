@@ -5,6 +5,7 @@
         "pages/my/my",
         "pages/getMyCard/getMyCard",
         "pages/billBoard/billBoard",
+        "pages/testSancode/testSancode",
         "pages/logs/logs"
     ],
     "window": {

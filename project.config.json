@@ -33,8 +33,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "排行榜",
-					"pathName": "pages/getMyCard/getMyCard",
+					"name": "体验二维码",
+					"pathName": "pages/testSancode/testSancode",
 					"query": ""
 				}
 			]
