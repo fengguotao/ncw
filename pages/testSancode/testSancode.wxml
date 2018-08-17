@@ -1,2 +1,22 @@
 <!--pages/testSancode/testSancode.wxml-->
-<text>pages/testSancode/testSancode.wxml</text>
+
+<view class="content">
+    <view class="img">
+        <view class="nuo-tit">挪车体验码</view>
+        <view class="nuo-grey">注：此二维码仅作为体验使用</view>
+        <image src="/images/nuo_img.png"></image>
+    </view>
+    <view class="text">
+        <view class="text-grey">点击申请邮寄，您将收到一套精美的官司方挪车贴，请在收到挪车码后请按照说明书<view class="text-red">重新绑定</view>  使用</view>
+    </view>
+    
+</view>
+
+<view class="btm">
+    <view class="btm-btton">
+        <button class="apply">申请邮寄</button>
+        <button class="del">删除体验码</button>
+        <view class="customer">点击联系客服</view>
+    </view>
+</view>
+

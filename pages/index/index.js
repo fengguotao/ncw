@@ -8,6 +8,9 @@ Page({
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
+    e_scanCode() {
+      this.utils.navigateTo('testSancode')
+    },
     //事件处理函数
     bindViewTap: function() {
         wx.navigateTo({
