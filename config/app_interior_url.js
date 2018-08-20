@@ -13,6 +13,6 @@ const app_interior_url = { //应用内跳转
     logs: '/pages/logs/logs', //首页
     putForward: '/pages/putForward/putForward',  //收益及提现
     activityRules: '/pages/activityRules/activityRules',  //活动规则
-    //nuoList:'pages/nuoList/nuoList',  //挪车码列表
+    nuoList:'/pages/nuoList/nuoList',  //挪车码列表
 }
 module.exports = app_interior_url

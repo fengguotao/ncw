@@ -10,7 +10,8 @@
         "pages/invite/invite",
         "pages/logs/logs",
         "pages/putForward/putForward",
-        "pages/activityRules/activityRules"
+        "pages/activityRules/activityRules",
+        "pages/nuoList/nuoList"
     ],
     "window": {
         "navigationBarBackgroundColor": "#3b5998",

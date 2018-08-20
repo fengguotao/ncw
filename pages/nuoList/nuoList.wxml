@@ -1,0 +1,26 @@
+<!--pages/nuoList/nuoList.wxml-->
+<scroll-view class="scroll-view" scroll-y="true">
+  <view class="item-list">
+      <view class="item" wx:for="{{dataList}}" wx:key="item">
+          <view class="item-left">
+              <image src="{{item.pic}}"></image>
+          </view>
+          <view class="item-moddle">
+            <view>
+              <view class="item-moddle-txt">
+                <view class="mod-code">{{item.carCode}}</view>
+                <view class="txt-red">体验码</view>
+              </view>
+              <view class="item-moddle-txt">
+                <view class="mod-txt">绑定手机：</view>
+                <view class="mod-txt">{{item.tel}}</view>
+              </view>
+              
+            </view>            
+          </view>
+          <view class="item-right">
+            <image src="/images/me_icon4.png"></image>
+          </view>
+      </view>
+  </view>
+</scroll-view>
