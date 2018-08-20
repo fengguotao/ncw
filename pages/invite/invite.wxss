@@ -1,0 +1,111 @@
+/* pages/invite/invite.wxss */
+
+page {
+    width: 100%;
+    height: 100%;
+    background-image: url(http://api.nuochewang.net/wximages/index_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20% 4% 0 4%;
+    box-sizing: border-box;
+}
+
+.conter {
+    width: 100%;
+    height: 70%;
+    background-image: url(http://api.nuochewang.net/wximages/yqbg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* margin: 10% 2% 0 2%; */
+    padding-top: 180rpx;
+    box-sizing: border-box;
+    text-align: center
+}
+
+.toast-text {
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #ec4d35;
+    font-size: 55rpx;
+    font-weight: 500;
+}
+
+.btn {
+    margin: 20rpx auto;
+    height: 50rpx;
+    width: 300rpx;
+    border: #e14538 solid 1rpx;
+    /* background-image: linear-gradient(-230deg, #FFFFFF 0%, #FEDFEF 100%); */
+    box-shadow: 0 0 16rpx 0 rgba(255, 255, #fedfef, 0.50);
+    border-radius: 200rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.zreer {
+    height: 10rpx;
+    width: 10rpx;
+    border-radius: 10rpx;
+    border: #e14538 solid 1rpx;
+    margin: 0 10rpx
+}
+
+.btn-text {
+    font-size: 28rpx;
+    color: #e6231a;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.witr-text-up {
+    margin-top: 220rpx;
+}
+
+.witr-text-up,
+.witr-text {
+    height: 45rpx;
+    line-height: 45rpx;
+    color: #FFFFFF;
+    font-size: 35rpx;
+}
+
+.y-btn {
+    width: 80%;
+    height: 96rpx;
+    margin-top: 40rpx;
+    margin-left: 10%;
+    background: #ffef6a;
+    border-radius: 8rpx;
+    color: #de0016;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.w-gomoney {
+    width: 100%;
+    height: 96rpx;
+    background: #FFFFFF;
+    margin-top: 40rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.left {
+    display: flex;
+    align-items: center
+}
+
+.left image {
+    margin: 0 30rpx;
+    height: 40rpx;
+    width: 39rpx
+}
+
+.right {
+    margin: 0 30rpx;
+    height: 35rpx;
+    width: 20rpx
+}

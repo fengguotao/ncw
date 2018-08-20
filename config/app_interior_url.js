@@ -7,9 +7,9 @@ const app_interior_url = { //应用内跳转
     faqList: '/pages/faqList/faqList', //首页
     testSancode: '/pages/testSancode/testSancode', //体验码
     carCode: '/pages/carCode/carCode', //挪车码
+    getMyCard: '/pages/getMyCard/getMyCard', //首页
+    billBoard: '/pages/billBoard/billBoard', //首页
+    invite: '/pages/invite/invite', //首页
+    logs: '/pages/logs/logs', //首页
 }
-"pages/faqList/faqList",
-"pages/my/my",
-"pages/testSancode/testSancode",
-"/pages/carCode/carCode",
 module.exports = app_interior_url

@@ -7,6 +7,7 @@
         "pages/billBoard/billBoard",
         "pages/testSancode/testSancode",
         "pages/carCode/carCode",
+        "pages/invite/invite",
         "pages/logs/logs"
     ],
     "window": {

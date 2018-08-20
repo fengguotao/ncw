@@ -1,0 +1,26 @@
+<!--pages/invite/invite.wxml-->
+<view class="conter">
+    <view class="toast-text">扫码挪车</view>
+    <view class="toast-text">邀你赚赏金</view>
+    <view class="btn">
+        <view class="zreer"></view>
+        <view class="btn-text">点击查看活动详情</view>
+        <view class="zreer"></view>
+    </view>
+    <view class="witr-text-up">
+        邀请好友购买挪车贴，赚取赏金
+    </view>
+    <view class="witr-text">
+        赏金上不封顶
+    </view>
+</view>
+<view class="y-btn">
+    <text>立即赚赏金</text>
+</view>
+<view class="w-gomoney">
+    <view class="left">
+        <image src="/images/money.png"></image>
+        <view></view>我的收益
+    </view>
+    <image class="right" src="/images/top_jtright.png"></image>
+</view>
