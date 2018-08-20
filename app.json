@@ -6,6 +6,7 @@
         "pages/getMyCard/getMyCard",
         "pages/billBoard/billBoard",
         "pages/testSancode/testSancode",
+        "pages/carCode/carCode",
         "pages/logs/logs"
     ],
     "window": {

@@ -18,7 +18,7 @@
     <view class="btn">
         <button form-type="submit" hover-class="none" bindtap="e_scanCode">领取我的挪车码</button>
     </view>
-    <view class="experience">
+    <view class="experience" bindtap="e_online">
         线上体验
     </view>
     <view class="flow">

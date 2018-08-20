@@ -9,6 +9,9 @@ Page({
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     e_scanCode() {
+      this.utils.navigateTo('carCode')
+    },
+    e_online() {
       this.utils.navigateTo('testSancode')
     },
     //事件处理函数
