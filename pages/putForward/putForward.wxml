@@ -1,0 +1,9 @@
+<!--pages/putForward/putForward.wxml-->
+
+<view class="content">
+    <view class="cont-text">累计收益（元）</view>    
+    <view class="money">{{money}}</view>
+    <view>
+      <button class="applyPut">申请提现</button>
+    </view>    
+</view>

@@ -1,0 +1,51 @@
+/* pages/activityRules/activityRules.wxss */
+
+page {
+  background-color:#355995;
+}
+
+.top{
+  width:100%;
+  height:110rpx;
+  color:#fff;
+  font-size:32rpx;
+  text-align:center;
+}
+
+.top .top-tit{
+  width:422rpx;
+  height:50rpx;
+  margin:0 auto;
+  padding-top:60rpx;
+}
+
+.top .top-tit .line{
+  width:86rpx;
+  height:2rpx;
+  float:left;
+  margin-top:22rpx;
+  background:#fff;
+}
+
+.top .top-tit .title{
+  float:left;
+  margin:0rpx 10rpx;
+}
+
+.content{
+  width:94%;
+  margin:0 auto;
+}
+
+.content .cont-tit{
+  color:#ffed3f;
+  font-size:28rpx;
+  line-height:60rpx;  
+}
+
+.content .cont-text{
+  color:#fff;
+  font-size:26rpx;
+  line-height: 40rpx;
+  margin-bottom:18rpx;
+}

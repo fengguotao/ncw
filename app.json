@@ -8,7 +8,9 @@
         "pages/testSancode/testSancode",
         "pages/carCode/carCode",
         "pages/invite/invite",
-        "pages/logs/logs"
+        "pages/logs/logs",
+        "pages/putForward/putForward",
+        "pages/activityRules/activityRules"
     ],
     "window": {
         "navigationBarBackgroundColor": "#3b5998",

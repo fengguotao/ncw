@@ -1,0 +1,19 @@
+<!--pages/activityRules/activityRules.wxml-->
+
+<view class="top">
+    <view class="top-tit">
+        <view class="line"></view>    
+        <view class="title">赚赏金活动规则</view>
+        <view class="line"></view>  
+    </view>  
+</view>
+
+
+<view class="content">
+  <view wx:for="{{dataList}}" wx:key="item">
+    <view class="cont-tit">{{item.title}}</view>
+   <view class="cont-text" wx:for="{{item.content}}" wx:for-item="val">
+    <view>{{val}}</view>
+   </view>
+  </view>  
+</view>
