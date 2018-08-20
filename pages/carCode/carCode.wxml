@@ -1,0 +1,24 @@
+<!--pages/carCode/carCode.wxml-->
+
+<view class="top">
+    <view class="left">
+        <view class="code">{{carCode}}</view>
+        <view class="tips">临时停靠，请多关照</view>        
+    </view>
+    <view class="right">
+      <view class="rect"></view>
+      <image src="/images/bot_icon01.png"></image>
+    </view>    
+</view>
+
+<view class="content">
+    <view class="cont-btton">
+        <view class="tips">非常抱歉，临时停靠，通过下列方式通知我，我会马上来挪车，给你带来不便，请您谅解！    </view>
+        <button class="info">短消息通知车主</button>
+        <button class="notice">匿名电话通知</button>
+    </view>
+</view>
+
+<view class="btm">
+  <view>点击联系客服</view>
+</view>
