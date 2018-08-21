@@ -11,7 +11,8 @@
         "pages/logs/logs",
         "pages/putForward/putForward",
         "pages/activityRules/activityRules",
-        "pages/nuoList/nuoList"
+        "pages/nuoList/nuoList",
+        "pages/orderList/orderList"
     ],
     "window": {
         "navigationBarBackgroundColor": "#3b5998",

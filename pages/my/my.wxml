@@ -8,11 +8,11 @@
     </view>
 </view>
 <view class="tab">
-    <view class="left">
+    <view class="left" bindtap='order'>
         <view class="one">0</view>
         <view class="two">订单</view>
     </view>
-    <view class="right">
+    <view class="right" bindtap='moveCar'>
         <view class="one">0</view>
         <view class="two">挪车码/张</view>
     </view>
