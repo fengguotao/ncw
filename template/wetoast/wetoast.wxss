@@ -1,19 +1,21 @@
-
 .wetoast {
     display: none;
-  }
-  .wetoast_show {
+}
+
+.wetoast_show {
     display: block;
-  }
-  .wetoast__mask {
+}
+
+.wetoast__mask {
     position: fixed;
-    z-index: 1000;
+    z-index: 10001;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-  }
-  .wetoast__bd {
+}
+
+.wetoast__bd {
     opacity: 0;
     position: fixed;
     z-index: 5000;
@@ -31,13 +33,14 @@
     color: #FFFFFF;
     word-wrap: break-word;
     word-break: break-all;
-  }
-  .wetoast__bd__title {
+}
+
+.wetoast__bd__title {
     font-size: 32rpx;
-  }
-  .wetoast__bd.bottom{
+}
+
+.wetoast__bd.bottom {
     top: auto;
     bottom: 80rpx;
     min-height: 20rpx;
-  }
-  
+}

@@ -15,13 +15,37 @@
 
 </view>
 
-<view class="buy-num"></view>
+<view class="buy-num">
+    <view class="item-title">购买数量</view>
+    <view class="buy-num-right">
+        <view class="num-left">-</view>
+        <view class="num-cont">
+            <input type="number" value="{{fullName}}" bindinput="bindNumInput" />
+        </view>
+        <view class="num-right">+</view>
+    </view>
+</view>
 
-<view class="buy-input"></view>
-<view class="buy-input"></view>
-<view class="buy-input"></view>
-<view class="buy-input"></view>
-<view class="buy-input"></view>
+<view class="buy-input">
+    <view class="item-title">车辆品牌</view>
+    <input type="text" value="{{fullName}}" bindinput="bindNumInput" />
+</view>
+<view class="buy-input">
+    <view class="item-title">收件人</view>
+    <input type="text" />
+</view>
+<view class="buy-input">
+    <view class="item-title">收获地址</view>
+    <input type="text" />
+</view>
+<view class="buy-input">
+    <view class="item-title">联系电话</view>
+    <input type="number" />
+</view>
+<view class="buy-input">
+    <view class="item-title">备注</view>
+    <input type="text" />
+</view>
 
 <view class="btm">
     <view class="btm-text">注：收到挪车码后请您先扫描进行绑定车辆和手机信息，绑定后方可使用，如有疑问请查看<text>常见问题</text></view>

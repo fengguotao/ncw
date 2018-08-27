@@ -1,0 +1,33 @@
+var filter = {
+  numberToFix: function (value) {
+    return value.toFixed(1)
+  },
+  formatTime: function (phone) {
+    phone = phone.toString()
+    // var d = new Date()
+    var mphone = phone.slice(0, 3) + '****' + phone.slice(7);
+    return mphone
+    // var year = date.getFullYear()
+    // var month = date.getMonth() + 1
+    // var day = date.getDate()
+    // return [year, month, day].map(formatNumber).join('-')
+  },
+  priceConversion: function(priceValue) {
+    if (!priceValue) {priceValue = "0000"}
+    var val = priceValue + ''
+    var intNum = val.slice(0, -2) || "00"
+    var decimalNum = val.slice(-2) || "00"
+    console.log(intNum + "." + decimalNum)
+    return intNum + "." + decimalNum
+  }
+  // ,
+  // formatNumber: function (n) {
+  //   n = n.toString()
+  //   return n[1] ?n: '0' + n
+  // }
+}
+module.exports = {
+  numberToFix: filter.numberToFix,
+  formatTime: filter.formatTime,
+  priceConversion: filter.priceConversion
+}

@@ -1,13 +1,15 @@
-function WeToast () { //这是让小程序 返回上一页；
+function WeToast() {
+    const app = getApp()
     let pages = getCurrentPages()
     let curPage = pages[pages.length - 1]
     this.__page = curPage
     this.__timeout = null
-
-    //附加到page上，方便访问
+    this.__page.setData({
+            isIphoneX: app.globalData.isIphoneX
+        })
+        //附加到page上，方便访问
     curPage.wetoast = this
-
-    // return this
+    return this
 }
 
 //切换显示/隐藏
@@ -20,8 +22,7 @@ WeToast.prototype.toast = function(data) {
         }
     } catch (err) {
         console.error(err)
-        
-        // fail callback
+            // fail callback
         data && typeof data.fail === 'function' && data.fail(data)
     } finally {
         // complete callback
@@ -32,15 +33,13 @@ WeToast.prototype.toast = function(data) {
 //显示
 WeToast.prototype.show = function(data) {
     let page = this.__page
-
     clearTimeout(this.__timeout)
-
-    //display需要先设置为block之后，才能执行动画
+        //display需要先设置为block之后，才能执行动画
     page.setData({
         '__wetoast__.reveal': true
     })
 
-    setTimeout(()=>{
+    setTimeout(() => {
         let animation = wx.createAnimation()
         animation.opacity(1).step()
         data.animationData = animation.export()
@@ -48,18 +47,16 @@ WeToast.prototype.show = function(data) {
         page.setData({
             __wetoast__: data
         })
-    },30)
+    }, 30)
 
     if (data.duration === 0) {
         // success callback after toast showed
-        setTimeout (() => {
+        setTimeout(() => {
             typeof data.success === 'function' && data.success(data)
         }, 430)
     } else {
         this.__timeout = setTimeout(() => {
             this.toast()
-
-            // success callback
             typeof data.success === 'function' && data.success(data)
         }, (data.duration || 1500) + 400)
     }
@@ -68,26 +65,23 @@ WeToast.prototype.show = function(data) {
 //隐藏
 WeToast.prototype.hide = function() {
     let page = this.__page
-
     clearTimeout(this.__timeout)
-
     if (!page.data.__wetoast__.reveal) {
         return
     }
-    
+
     let animation = wx.createAnimation()
     animation.opacity(0).step()
     page.setData({
         '__wetoast__.animationData': animation.export()
     })
-    
+
     setTimeout(() => {
         page.setData({
             __wetoast__: {
-                reveal:false
+                reveal: false
             }
         })
-        console.log(page.data)
     }, 400)
 }
 

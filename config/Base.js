@@ -6,30 +6,6 @@ function MyUtils() {
     const pages = getCurrentPages()
     const curPage = pages[pages.length - 1]
     this.__page = curPage
-    const that = this
-        /**
-         *  打电话的方法 
-         *  @param string [电话号码]
-         */
-    that.__page.deliveryCallPhone = function(e) {
-            wx.makePhoneCall({
-                phoneNumber: e.currentTarget.dataset.phone //仅为示例，并非真实的电话号码
-            })
-        }
-        /**  
-         * 图片缩放 
-         * @param {*图片url} string 
-         */
-    that.__page.showWhePic = function(e) {
-        var current = e.target.dataset.src
-        if (!current || current == '') {
-            return
-        }
-        wx.previewImage({
-            current: current,
-            urls: [current]
-        })
-    }
     curPage.utils = this
 }
 /****************************************************页面栈********************************************************/
@@ -93,19 +69,17 @@ MyUtils.prototype.switchTab = function(urlkey, skipData = null) {
  * 弹窗loading
  */
 MyUtils.prototype.showLoading = function(data = '加载中...') {
-        this.__page.setData({
-            loadingTxt: data,
-            loading: true
-        })
+        let reqData = {
+            title: data
+        }
+        return this.wxGenPromise('showLoading', reqData)
     }
     /** 
      * 取消loading
      */
 MyUtils.prototype.hideLoading = function() {
-        this.__page.setData({
-            loadingTxt: '',
-            loading: false
-        })
+        console.log('hideLoading')
+        return this.wxGenPromise('hideLoading', {})
     }
     /****************************************************loading********************************************************/
 

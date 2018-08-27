@@ -1,26 +1,43 @@
-// pages/getMyCard/getMyCard.js
+// pages/getMyTrial/getMyTrial.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        fullName: 1
+        item1: ["京", "津", "渝", "沪", "冀", "晋", "辽", "吉"],
+        item2: ["黑", "苏", "浙", "皖", "闽", "赣", "鲁", "豫"],
+        item3: ["鄂", "湘", "粤", "琼", "川", "贵", "云", "陕"],
+        item4: ["甘", "青", "蒙", "桂", "宁", "新", "藏", "使"],
+        item5: ["领", "警", "学", "港", "澳"],
+        itemHidden: true,
+        carNo: '京',
+        oldPhone: '13522259154',
+        newPhone: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-
+        new app.globalData.MyUtils()
     },
-    bindNumInput(event) {
-        let content = event.detail.value
-        console.log(content, typeof content)
-        this.data.fullName = content
+    changeCarNo() {
         this.setData({
-            fullName: this.data.fullName,
+            itemHidden: this.data.itemHidden ? false : true
         })
+    },
+    pitchOn(e) {
+        // console.log(e.currentTarget.id)
+        // console.log(e.target.id)
+        this.setData({
+            carNo: e.target.id
+        })
+    },
+
+    e_online() {
+        this.utils.navigateTo('testSancode')
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

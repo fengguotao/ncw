@@ -1,0 +1,63 @@
+<!--pages/getMyTrial/getMyTrial.wxml-->
+<view class="binding-top">
+    <view class="binding-top-text">请填写车主信息，生成挪车码</view>
+</view>
+<view class="binding-conter">
+    <view class="binding-conter-top">
+        <view class="binding-conter-top-left" bindtap="changeCarNo">
+            <view class="binding-car-por">{{carNo}}</view>
+        </view>
+        <view class="binding-conter-top-right">
+            <input type="text" value="{{fullName}}" bindinput="bindNumInput" placeholder="点击输入" />
+        </view>
+    </view>
+    <view class="binding-conter-foot">
+        <input type="text" value="{{newPhone}}" bindinput="bindNumInput" placeholder="通知您绑定的手机号:{{oldPhone}}" />
+    </view>
+</view>
+<view class="binding-btn">
+    <view class="btn" bindtap="e_online">确认生成</view>
+</view>
+<view class="service">
+    点击联系客服
+</view>
+<view class="plate-number-all" hidden="{{itemHidden}}">
+    <view class="plate-number-line">
+        <block wx:for="{{item1}}" wx:key="item">
+            <view class="plate-number-item">
+                <view bindtap="pitchOn" id="{{item}}" class="plate-number-item-text {{carNo === item?'pitch-on':''}}">{{item}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="plate-number-line">
+        <block wx:for="{{item2}}" wx:key="item">
+            <view class="plate-number-item">
+                <view bindtap="pitchOn" id="{{item}}" class="plate-number-item-text {{carNo === item?'pitch-on':''}}">{{item}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="plate-number-line">
+        <block wx:for="{{item3}}" wx:key="item">
+            <view class="plate-number-item">
+                <view bindtap="pitchOn" id="{{item}}" class="plate-number-item-text {{carNo === item?'pitch-on':''}}">{{item}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="plate-number-line">
+        <block wx:for="{{item4}}" wx:key="item">
+            <view class="plate-number-item">
+                <view bindtap="pitchOn" id="{{item}}" class="plate-number-item-text {{carNo === item?'pitch-on':''}}">{{item}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="plate-number-line">
+        <block wx:for="{{item5}}" wx:key="item">
+            <view class="plate-number-item">
+                <view bindtap="pitchOn" id="{{item}}" class="plate-number-item-text {{carNo === item?'pitch-on':''}}">{{item}}</view>
+            </view>
+        </block>
+        <view class="plate-number-hidden-item ">
+            <view class="plate-number-hidden-item-text" bindtap="changeCarNo">隐藏</view>
+        </view>
+    </view>
+</view>

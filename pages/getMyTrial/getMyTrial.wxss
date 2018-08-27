@@ -1,0 +1,183 @@
+/* pages/getMyTrial/getMyTrial.wxss */
+
+page {
+    width: 100%;
+    height: 100%;
+    background: rgb(230, 233, 241)
+}
+
+.binding-top {
+    width: 100%;
+    height: 400rpx;
+    background: rgb(44, 68, 135);
+}
+
+.binding-top-text {
+    height: 300rpx;
+    line-height: 300rpx;
+    width: 100%;
+    font-size: 35rpx;
+    color: #FFFFFF;
+    text-align: center
+}
+
+.binding-conter {
+    height: 300rpx;
+    width: 690rpx;
+    background: #FFFFFF;
+    border-radius: 10rpx;
+    margin-left: 30rpx;
+    margin-top: -150rpx;
+}
+
+.binding-conter-top {
+    width: 100%;
+    height: 149rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.binding-conter-top-left {
+    height: 100rpx;
+    width: 390rpx;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.binding-car-por {
+    height: 100rpx;
+    width: 150rpx;
+    background: rgb(47, 77, 146);
+    border-radius: 10rpx;
+    position: relative;
+    color: #FFFFFF;
+    line-height: 100rpx;
+    padding-left: 50rpx;
+}
+
+.binding-car-por:before {
+    content: '';
+    position: absolute;
+    top: 45rpx;
+    right: 30rpx;
+    width: 0;
+    height: 0;
+    border-left: 15rpx solid transparent;
+    border-right: 15rpx solid transparent;
+    border-top: 15rpx solid #ececec;
+}
+
+.binding-conter-top-right {
+    height: 100rpx;
+    width: 600rpx;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+}
+
+.binding-conter-top-right input {
+    width: 100%;
+    height: 100rpx
+}
+
+.binding-conter-foot {
+    width: 100%;
+    height: 150rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.binding-conter-foot input {
+    width: 90%;
+    height: 100rpx;
+}
+
+.binding-conter-foot .input-placeholder {
+    font-size: 32rpx
+}
+
+.binding-btn {
+    height: 200rpx;
+    width: 100%;
+    padding: 70rpx 30rpx 50rpx 30rpx;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #ED483F;
+    border-radius: 10rpx;
+    font-size: 35rpx;
+    color: #FFFFFF;
+    letter-spacing: 3rpx;
+    text-align: center
+}
+
+.service {
+    width: 100%;
+    height: 35rpx;
+    font-size: 30rpx;
+    color: #999999;
+    text-align: center
+}
+
+.plate-number-all {
+    height: 480rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15rpx;
+    box-sizing: border-box;
+    background: rgb(206, 212, 216)
+}
+
+.plate-number-line {
+    height: 90rpx;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.plate-number-item {
+    height: 90rpx;
+    width: 90rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.plate-number-hidden-item {
+    height: 90rpx;
+    width: 270rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.plate-number-item-text {
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 80rpx;
+    background: #FFFFFF;
+    border-radius: 10rpx;
+    text-align: center
+}
+
+.plate-number-hidden-item-text {
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 260rpx;
+    background: rgb(169, 182, 186);
+    border-radius: 10rpx;
+    text-align: center
+}
+
+.pitch-on {
+    background: rgb(169, 182, 186);
+}
