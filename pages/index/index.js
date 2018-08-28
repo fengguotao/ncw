@@ -1,5 +1,7 @@
 //index.js
 const app = getApp()
+import Util from '../../utils/util'
+import requestType from '../../config/app_request_url.js'
 const lm = require('../../utils/services/loginManager')
 Page({
     data: {
@@ -50,5 +52,21 @@ Page({
                 itemArr: num.split('')
             })
         }
+    },
+    getPhoneNumber: function(e) {
+        let _this = this
+        Util.wxlogin().then((res) => {
+            app.userFastLogin(e, {
+                suc: function(res) {
+                    console.log(res)
+                },
+                fail: function(type) {
+                    console.log('-------' + type)
+                }
+
+            }, _this)
+        }, (fail) => {
+            console.log(fail)
+        })
     }
 })

@@ -3,13 +3,13 @@
  */
 
 const host = 'http://10.12.0.11:8080' // 
-const app = getApp()
     // 测试环境 
 const appRequest = {
         AppID: 'wxddde6f6e9b273be2',
         AppSecret: '7b890599d941f0b7c3182117f7ef3aba',
         /*接口------------------------------------------------ */
         login: `${host}/api/user/login`, //登陆接口
+        getWxBindMobile: `${host}/api/user/wxBindMobile`, //解密微信绑定手机号
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return
