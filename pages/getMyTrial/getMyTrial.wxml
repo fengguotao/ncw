@@ -1,4 +1,6 @@
 <!--pages/getMyTrial/getMyTrial.wxml-->
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
 <view class="binding-top">
     <view class="binding-top-text">请填写车主信息，生成挪车码</view>
 </view>

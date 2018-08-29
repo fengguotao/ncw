@@ -1,4 +1,6 @@
 <!--pages/invite/invite.wxml-->
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
 <view class="conter">
     <view class="toast-text">扫码挪车</view>
     <view class="toast-text">邀你赚赏金</view>

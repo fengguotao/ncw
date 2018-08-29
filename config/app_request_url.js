@@ -5,11 +5,13 @@
 const host = 'http://10.12.0.11:8080' // 
     // 测试环境 
 const appRequest = {
-        AppID: 'wxddde6f6e9b273be2',
-        AppSecret: '7b890599d941f0b7c3182117f7ef3aba',
+        AppID: 'wx9eaa37645a723075',
+        AppSecret: 'd0e07b64d62c369882b23f7b594e90f5',
         /*接口------------------------------------------------ */
         login: `${host}/api/user/login`, //登陆接口
         getWxBindMobile: `${host}/api/user/wxBindMobile`, //解密微信绑定手机号
+        CreateMailOrder: `${host}/api/order/createMailOrder`, //创建邮寄订单
+        CreateTestOrder: `${host}/api/order/createTestOrder`, //创建体验码
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return
@@ -32,7 +34,7 @@ const appRequest = {
                         console.log('[返回结果]', res)
                         let code = res.data.code;
                         let statusCode = res.statusCode;
-                        if (statusCode == 200 && code == 0) {
+                        if (statusCode == 200) {
                             resolve(res)
                         } else {
                             reject(res)

@@ -17,5 +17,6 @@ const formatNumber = n => {
 
 module.exports = {
     formatTime: formatTime,
-    wxlogin: wxApi.wxlogin
+    wxlogin: wxApi.wxlogin,
+    requestPayment: wxApi.requestPayment
 }

@@ -16,7 +16,7 @@
         车主的选择
     </view>
     <view class="btn">
-        <button form-type="submit" hover-class="none" bindtap="e_scanCode">领取我的挪车码</button>
+        <button hover-class="none" catchtap="e_scanCode">领取我的挪车码</button>
     </view>
     <view class="experience">
         <button class="item-bg" hover-class="none" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">线上体验</button>

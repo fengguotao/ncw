@@ -1,5 +1,6 @@
 <!--pages/testSancode/testSancode.wxml-->
-
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
 <view class="content">
     <view class="img">
         <view class="nuo-tit">挪车体验码</view>
@@ -7,9 +8,10 @@
         <image src="/images/nuo_img.png"></image>
     </view>
     <view class="text">
-        <view class="text-grey">点击申请邮寄，您将收到一套精美的官司方挪车贴，请在收到挪车码后请按照说明书<view class="text-red">重新绑定</view>  使用</view>
+        <view class="text-grey">点击申请邮寄，您将收到一套精美的官司方挪车贴，请在收到挪车码后请按照说明书
+            <view class="text-red">重新绑定</view> 使用</view>
     </view>
-    
+
 </view>
 
 <view class="btm">
@@ -19,4 +21,3 @@
         <view class="customer">点击联系客服</view>
     </view>
 </view>
-

@@ -53,20 +53,35 @@ Page({
             })
         }
     },
-    getPhoneNumber: function(e) {
+    getPhoneNumber(e) {
         let _this = this
-        Util.wxlogin().then((res) => {
+        Util.wxlogin().then((loginres) => {
             app.userFastLogin(e, {
                 suc: function(res) {
                     console.log(res)
+                    res.code = loginres.code
+                    _this.getWxBindMobile(res)
                 },
                 fail: function(type) {
                     console.log('-------' + type)
                 }
-
             }, _this)
         }, (fail) => {
             console.log(fail)
         })
+    },
+    getWxBindMobile(data) {
+        let url = requestType['getWxBindMobile']
+        requestType.genPromise({
+            url,
+            data: data,
+            method: 'POST'
+        }).then((success) => {
+            console.log(success)
+            this.utils.navigateTo('getMyTrial', { phone: '122323' })
+        }, () => {
+            this.utils.toast('手机号码授权失败')
+            this.utils.navigateTo('getMyTrial', { phone: '122323' })
+        });
     }
 })

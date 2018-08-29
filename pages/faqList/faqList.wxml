@@ -1,4 +1,6 @@
 <!--pages/faqList/faqList.wxml-->
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
 <scroll-view class="scroll-view" scroll-y="true">
     <block wx:for="{{FQAList}}" wx:key="item">
         <view class="backline"></view>

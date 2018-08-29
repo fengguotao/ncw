@@ -1,33 +1,35 @@
 <!--pages/orderList/orderList.wxml
  wx:for="{{dataList}}"-->
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
 <scroll-view class="scroll-view" scroll-y="true">
-  <view class="order-list" wx:for="{{orderList}}" wx:key="item">
-      <view class="order-margin"></view>
-      <view class="order">
-          <view class="order-top">
-              <view class="order-time">下单时间</view>
-              <view class="order-time">{{item.orderTime}}</view>
-               <view class="{{item.orderStatus == 0 ? 'order-success':'order-unpay'}}">{{item.orderStatus == 0 ? '已成功' : '未付款'}}</view>
-          </view>
-          <view class="order-btm">
-            <view class="order-btm-left">
-              <image src="{{item.orderImg}}"></image>
-            </view>  
-            <view class="order-btm-mod">
-              <view class="tit">挪车贴</view>
-              <view class="oth">
-                <view class="oth-txt">购买数量</view>
-                <view class="oth-num">{{item.orderNum}}</view>
-              </view>
-              <view class="oth">
-                <view class="oth-txt">联系电话</view>
-                <view class="oth-num">{{item.tel}}</view>
-              </view>
+    <view class="order-list" wx:for="{{orderList}}" wx:key="item">
+        <view class="order-margin"></view>
+        <view class="order">
+            <view class="order-top">
+                <view class="order-time">下单时间</view>
+                <view class="order-time">{{item.orderTime}}</view>
+                <view class="{{item.orderStatus == 0 ? 'order-success':'order-unpay'}}">{{item.orderStatus == 0 ? '已成功' : '未付款'}}</view>
             </view>
-            <view class="order-btm-right">
-              <view>￥{{item.orderMoney}}</view>
-            </view>          
-          </view>
-      </view>
-  </view>
+            <view class="order-btm">
+                <view class="order-btm-left">
+                    <image src="{{item.orderImg}}"></image>
+                </view>
+                <view class="order-btm-mod">
+                    <view class="tit">挪车贴</view>
+                    <view class="oth">
+                        <view class="oth-txt">购买数量</view>
+                        <view class="oth-num">{{item.orderNum}}</view>
+                    </view>
+                    <view class="oth">
+                        <view class="oth-txt">联系电话</view>
+                        <view class="oth-num">{{item.tel}}</view>
+                    </view>
+                </view>
+                <view class="order-btm-right">
+                    <view>￥{{item.orderMoney}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
 </scroll-view>

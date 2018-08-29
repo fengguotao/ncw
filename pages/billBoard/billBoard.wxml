@@ -1,4 +1,6 @@
 <!--pages/billBoard/billBoard.wxml-->
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
 <view class="conter" scroll-y>
     <view class="list">
         <view class="top">

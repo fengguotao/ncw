@@ -7,6 +7,25 @@ function login() {
 function pageScrollTo(reqData = {}) {
     return wxGenPromise('pageScrollTo', reqData)
 }
+
+function requestPayment(reqData = {}) {
+    // let reqData = {
+    //     //小程序appid
+    //     appId: appId,
+    //     //时间戳从1970年1月1日00:00:00至今的秒数,即当前的时间
+    //     timeStamp: timeStamp,
+    //     //随机字符串，长度为32个字符以下。
+    //     nonceStr: nonceStr,
+    //     //统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=*
+    //     package: prepay_id,
+    //     //签名算法，暂支持 MD5
+    //     signType: 'MD5',
+    //     //签名
+    //     paySign: sign,
+    // }
+    console.log("requestPayment", reqData)
+    return wxGenPromise('requestPayment', reqData)
+}
 /**
  * 发起微信api请求
  * @param apiKey
@@ -83,6 +102,7 @@ function jumpPage(jumpKey, urlkey, skipData) {
 module.exports = {
     wxlogin: login,
     pageScrollTo: pageScrollTo,
+    requestPayment: requestPayment,
     navigateTo: navigateTo,
     redirectTo: redirectTo,
     reLaunch: reLaunch,
