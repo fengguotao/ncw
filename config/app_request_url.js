@@ -2,16 +2,17 @@
  * 小程序网络请求配置文件
  */
 
-const host = 'http://10.12.0.11:8080' // 
+const host = 'https://www.nuochewang.net' // 
     // 测试环境 
 const appRequest = {
         AppID: 'wx9eaa37645a723075',
         AppSecret: 'd0e07b64d62c369882b23f7b594e90f5',
         /*接口------------------------------------------------ */
-        login: `${host}/api/user/login`, //登陆接口
-        getWxBindMobile: `${host}/api/user/wxBindMobile`, //解密微信绑定手机号
-        CreateMailOrder: `${host}/api/order/createMailOrder`, //创建邮寄订单
-        CreateTestOrder: `${host}/api/order/createTestOrder`, //创建体验码
+        login: `${host}/api/auth/login`, //登陆接口
+
+        ranking: `${host}/api/ranking`, //排行榜
+        orderList: `${host}/api/order/list`, //创建邮寄订单
+        // CreateTestOrder: `${host}/api/order/createTestOrder`, //创建体验码
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return
@@ -32,7 +33,6 @@ const appRequest = {
                         console.log('[请求header]', data.header)
                         console.log('[请求data]', data.data)
                         console.log('[返回结果]', res)
-                        let code = res.data.code;
                         let statusCode = res.statusCode;
                         if (statusCode == 200) {
                             resolve(res)

@@ -62,7 +62,7 @@ var instance = (function() {
         }).then((success) => {
             const wxappLoginResData = success.data
             console.log('1111' + wxappLoginResData)
-            if (wxappLoginResData.code == 0) {
+            if (wxappLoginResData.state == 0) {
                 _userInfo = wxappLoginResData.data
                 app.globalData.userInfo = wxappLoginResData.data
                 _triggerSuccessObserver()

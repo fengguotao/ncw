@@ -6,21 +6,21 @@
         <view class="top">
             <view class="left">
                 <image class="icon" src="/images/phb_two.png"></image>
-                <view class="user-name">刘满分</view>
-                <view class="user-card">大众</view>
-                <view class="user-pice">¥ 1050.0</view>
+                <view class="user-name">{{ rank_list[1].name }}</view>
+                <view class="user-card">{{ rank_list[1].car_brand }}</view>
+                <view class="user-pice">¥ {{ rank_list[1].amount }}</view>
             </view>
             <view class="center">
                 <image class="icon" src="/images/phb_one.png"></image>
-                <view class="user-name">刘满分</view>
-                <view class="user-card">大众</view>
-                <view class="user-pice">¥ 1050.0</view>
+                <view class="user-name">{{ rank_list[0].name }}</view>
+                <view class="user-card">{{ rank_list[0].car_brand }}</view>
+                <view class="user-pice">¥ {{ rank_list[0].amount }}</view>
             </view>
             <view class="right">
                 <image class="icon" src="/images/phb_stree.png"></image>
-                <view class="user-name">刘满分</view>
-                <view class="user-card">大众</view>
-                <view class="user-pice">¥ 1050.0</view>
+                <view class="user-name">{{ rank_list[2].name }}</view>
+                <view class="user-card">{{ rank_list[2].car_brand }}</view>
+                <view class="user-pice">¥ {{ rank_list[2].amount }}</view>
             </view>
         </view>
     </view>
@@ -30,28 +30,11 @@
         <view class="td-3">车辆品牌</view>
         <view class="td-4">收益</view>
     </view>
-    <view class="tbody">
-        <view class="td-1">1</view>
-        <view class="td-2">周杰伦</view>
-        <view class="td-3">大众</view>
-        <view class="td-4">¥ 1990.0</view>
-    </view>
-    <view class="tbody">
-        <view class="td-1">1</view>
-        <view class="td-2">周杰伦</view>
-        <view class="td-3">大众</view>
-        <view class="td-4">¥ 1990.0</view>
-    </view>
-    <view class="tbody">
-        <view class="td-1">1</view>
-        <view class="td-2">周杰伦</view>
-        <view class="td-3">大众</view>
-        <view class="td-4">¥ 1990.0</view>
-    </view>
-    <view class="tbody">
-        <view class="td-1">1</view>
-        <view class="td-2">周杰伦</view>
-        <view class="td-3">大众</view>
-        <view class="td-4">¥ 1990.0</view>
+
+    <view class="tbody" wx:for="{{rank_list}}" wx:key="item" wx:if="{{ index > 2 }}">
+        <view class="td-1">{{index}}</view>
+        <view class="td-2">{{ item.name }}</view>
+        <view class="td-3">{{ item.car_brand }}</view>
+        <view class="td-4">¥ {{ item.amount }}</view>
     </view>
 </view>

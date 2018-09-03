@@ -24,9 +24,13 @@ Page({
         })
     },
     onLoginSuccess(userInfo) {
-        //登陆成功
+        console.log(userInfo)
+            //登陆成功
         this.utils.hideLoading()
+
+        let num = String(userInfo.used)
         this.setData({
+            itemArr: num.split(''),
             userInfo: userInfo
         })
 
@@ -34,10 +38,6 @@ Page({
     onLoginFail() {
         //登陆失败
         this.utils.hideLoading()
-        let num = '1555088'
-        this.setData({
-            itemArr: num.split('')
-        })
     },
     onLoad: function(opt) {
         new app.globalData.MyUtils()
@@ -47,7 +47,7 @@ Page({
             this.utils.showLoading('登录中...')
             lm.instance().login(opt.scene)
         } else { //已登录
-            let num = '1555088'
+            let num = this.data.userInfo.used
             this.setData({
                 itemArr: num.split('')
             })
