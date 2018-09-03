@@ -60,6 +60,7 @@ Page({
                 suc: function(res) {
                     console.log(res)
                     res.code = loginres.code
+                    res.openid = _this.data.userInfo.openid
                     _this.getWxBindMobile(res)
                 },
                 fail: function(type) {
@@ -71,7 +72,7 @@ Page({
         })
     },
     getWxBindMobile(data) {
-        let url = requestType['getWxBindMobile']
+        let url = requestType['CreateTestOrder']
         requestType.genPromise({
             url,
             data: data,

@@ -12,7 +12,7 @@ const appRequest = {
 
         ranking: `${host}/api/ranking`, //排行榜
         orderList: `${host}/api/order/list`, //创建邮寄订单
-        // CreateTestOrder: `${host}/api/order/createTestOrder`, //创建体验码
+        CreateTestOrder: `${host}/api/order/createTestOrder`, //创建体验码
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return
