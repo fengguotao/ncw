@@ -1,108 +1,101 @@
 page {
     width: 100%;
     height: 100%;
-    background-color:#eceef3;
+    background-color: #eceef3;
 }
 
-.top{
-  width:100%;
-  height:30%;
-  background-image: url(http://api.nuochewang.net/wximages/next_bg.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.top {
+    width: 100%;
+    height: 30%;
+    background-image: url(https://www.nuochewang.net/wximages/next_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-.top .left{
-  width:50%;
-  height:80rpx;
-  float:left;
+.top .left {
+    width: 50%;
+    height: 80rpx;
+    float: left;
 }
 
-.top .left{
-  padding-left:60rpx;
-  padding-top:120rpx;
+.top .left {
+    padding-left: 60rpx;
+    padding-top: 120rpx;
 }
 
-.top .tips{
-  line-height:60rpx;
+.top .tips {
+    line-height: 60rpx;
 }
 
-.top .right{
-  width:40%;
-  height:179rpx;
-  float:right;
-  position:relative;
+.top .right {
+    width: 40%;
+    height: 179rpx;
+    float: right;
+    position: relative;
 }
 
-.top .right .rect{
-    position: absolute; 
+.top .right .rect {
+    position: absolute;
     top: 80rpx;
-    right: 70rpx; 
-    width: 180rpx; 
-    height: 180rpx; 
-    background: linear-gradient(to left, #fff, #fff) left top no-repeat, 
-                linear-gradient(to bottom, #fff, #fff) left top no-repeat, 
-                linear-gradient(to left, #fff, #fff) right top no-repeat,
-                linear-gradient(to bottom, #fff, #fff) right top no-repeat, 
-                linear-gradient(to left, #fff, #fff) left bottom no-repeat,
-                linear-gradient(to bottom, #fff, #fff) left bottom no-repeat,
-                linear-gradient(to left, #fff, #fff) right bottom no-repeat,
-                linear-gradient(to left, #fff, #fff) right bottom no-repeat;
-    background-size: 1px 10px, 10px 1px, 1px 10px, 10px 1px;  
+    right: 70rpx;
+    width: 180rpx;
+    height: 180rpx;
+    background: linear-gradient(to left, #fff, #fff) left top no-repeat, linear-gradient(to bottom, #fff, #fff) left top no-repeat, linear-gradient(to left, #fff, #fff) right top no-repeat, linear-gradient(to bottom, #fff, #fff) right top no-repeat, linear-gradient(to left, #fff, #fff) left bottom no-repeat, linear-gradient(to bottom, #fff, #fff) left bottom no-repeat, linear-gradient(to left, #fff, #fff) right bottom no-repeat, linear-gradient(to left, #fff, #fff) right bottom no-repeat;
+    background-size: 1px 10px, 10px 1px, 1px 10px, 10px 1px;
 }
 
-.top .right image{
-  width:129rpx;
-  height:129rpx;
-  float:right;
-  margin-top:106rpx;
-  margin-right:92rpx;
+.top .right image {
+    width: 129rpx;
+    height: 129rpx;
+    float: right;
+    margin-top: 106rpx;
+    margin-right: 92rpx;
 }
 
-.top .code{
-  font-size:40rpx;
-  color:#fff;
+.top .code {
+    font-size: 40rpx;
+    color: #fff;
 }
 
-.top .tips{
-  color:#c6d7fc;
-  font-size:26rpx;
+.top .tips {
+    color: #c6d7fc;
+    font-size: 26rpx;
 }
 
-.content{
-  width:100%;
-  height:62%;
+.content {
+    width: 100%;
+    height: 62%;
 }
 
-.content .tips{
-  color:#333;
-  font-size:28rpx;
-  line-height:46rpx;
-  padding:40rpx 30rpx;
+.content .tips {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 46rpx;
+    padding: 40rpx 30rpx;
 }
 
-.cont-btton .info{
-  width:94%;
-  color:#fff;
-  margin:0 auto;  
-  font-size:32rpx;
-  background:#3e63a2;
+.cont-btton .info {
+    width: 94%;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 32rpx;
+    background: #3e63a2;
 }
 
-.cont-btton .notice{
-  width:94%;
-  margin:0 auto;
-  color:#3e63a2;
-  font-size:32rpx;
-  background:#fff;
-  margin-top:40rpx;
+.cont-btton .notice {
+    width: 94%;
+    margin: 0 auto;
+    color: #3e63a2;
+    font-size: 32rpx;
+    background: #fff;
+    margin-top: 40rpx;
 }
 
-.btm{
-  width:100%;
-  height:8%;
-  color:#a4a4a5;
-  line-height:90rpx;
-  text-align: center;
-  font-size:32rpx;
+.btm {
+    width: 100%;
+    height: 8%;
+    color: #a4a4a5;
+    line-height: 90rpx;
+    text-align: center;
+    font-size: 32rpx;
 }

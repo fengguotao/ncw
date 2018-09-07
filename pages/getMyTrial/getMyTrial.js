@@ -1,5 +1,7 @@
 // pages/getMyTrial/getMyTrial.js
 const app = getApp()
+import requestType from '../../config/app_request_url.js'
+import Util from '../../utils/util.js'
 Page({
 
     /**
@@ -13,7 +15,8 @@ Page({
         item5: ["领", "警", "学", "港", "澳"],
         itemHidden: true,
         carNo: '京',
-        oldPhone: '13522259154',
+        carNum: '',
+        oldPhone: '',
         newPhone: ''
     },
 
@@ -22,6 +25,10 @@ Page({
      */
     onLoad: function(options) {
         new app.globalData.MyUtils()
+        this.setData({
+            userInfo: app.globalData.userInfo,
+            oldPhone: options.phone
+        })
     },
     changeCarNo() {
         this.setData({
@@ -35,56 +42,61 @@ Page({
             carNo: e.target.id
         })
     },
-
+    bindcarNumInput(event) {
+        let content = event.detail.value
+        this.setData({
+            carNum: content,
+        })
+    },
+    updatePhoneInput(event) {
+        let content = event.detail.value
+        this.setData({
+            newPhone: content,
+        })
+    },
     e_online() {
-        this.utils.navigateTo('testSancode')
-    },
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function() {
+        let self = this
+        let data = {
+            openid: self.data.userInfo.openid
+        }
+        if (!self.data.carNum) {
+            self.utils.toast('输入车牌号')
+            return
+        }
 
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function() {
-
+        data.carNo = `${self.data.carNo}${self.data.carNum}`
+        if (!Util.isLicenseNo(data.carNo)) {
+            self.utils.toast('车牌号码格式不正确')
+            return
+        }
+        if (!self.data.newPhone && !self.data.oldPhone) {
+            self.utils.toast('输入电话号码')
+            return
+        }
+        if (!self.data.newPhone) {
+            data.phone = self.data.oldPhone
+        } else {
+            data.phone = self.data.newPhone
+        }
+        if (!Util.regExpPhoneNum(data.phone)) {
+            self.utils.toast('电话号码格式不正确！')
+            return
+        }
+        console.log(data)
+        let url = requestType['CreateTestOrder']
+        requestType.genPromise({
+            url,
+            data: data,
+            method: 'POST'
+        }).then((success) => {
+            console.log(success)
+            if (success.data.state === 0) {
+                self.utils.navigateTo('testSancode', success.data.data)
+            } else {
+                self.utils.toast('生成体验码失败')
+            }
+        }, () => {
+            self.utils.toast('生成体验码失败')
+        });
     }
 })

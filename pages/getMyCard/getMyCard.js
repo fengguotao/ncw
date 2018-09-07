@@ -26,6 +26,9 @@ Page({
      */
     onLoad: function(options) {
         new app.globalData.MyUtils()
+        this.setData({
+            userInfo: app.globalData.userInfo
+        })
         this.calculate()
     },
     bindCarNum(event) {
@@ -84,6 +87,9 @@ Page({
         })
         console.log(this.data.totalPrices)
     },
+    openFqa() {
+        this.utils.navigateTo('faqList')
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -106,9 +112,30 @@ Page({
     },
     giveMyCard() {
         let self = this
-        let url = requestType['CreateMailOrder']
+        let url = requestType['CreateOrder']
+        if (!self.data.postJosn['CarNo']) {
+            self.utils.toast('请填写车辆品牌！')
+            return
+        }
+        if (!self.data.postJosn['address']) {
+            self.utils.toast('请填写收货地址！')
+            return
+        }
+        if (!self.data.postJosn['persoName']) {
+            self.utils.toast('请填写收件人姓名！')
+            return
+        }
+        if (!self.data.postJosn['phone']) {
+            self.utils.toast('请填写电话号码！')
+            return
+        }
+        if (!Util.regExpPhoneNum(self.data.postJosn['phone'])) {
+            self.utils.toast('电话号码格式不正确！')
+            return
+        }
         let data = self.data.postJosn
         data.totalPrices = self.data.totalPrices
+        data.openid = self.data.userInfo.openid
         requestType.genPromise({
             url,
             data: data,

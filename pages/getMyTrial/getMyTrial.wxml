@@ -10,11 +10,11 @@
             <view class="binding-car-por">{{carNo}}</view>
         </view>
         <view class="binding-conter-top-right">
-            <input type="text" value="{{fullName}}" bindinput="bindNumInput" placeholder="点击输入" />
+            <input type="text" value="{{carNum}}" bindinput="bindcarNumInput" placeholder="点击输入" />
         </view>
     </view>
     <view class="binding-conter-foot">
-        <input type="text" value="{{newPhone}}" bindinput="bindNumInput" placeholder="通知您绑定的手机号:{{oldPhone}}" />
+        <input type="text" value="{{newPhone}}" bindinput="updatePhoneInput" placeholder="通知您绑定的手机号:{{oldPhone}}" />
     </view>
 </view>
 <view class="binding-btn">

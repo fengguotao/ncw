@@ -1,41 +1,45 @@
 //pages/nuoList/nuoList.js
 const app = getApp()
+import requestType from '../../config/app_request_url.js'
 Page({
-  data: {
-    dataList:[
-      { 
-        "pic":'/images/nuo_img.png',
-        "carCode":"京111111",
-        "tel":"22222222222"
-      },
-      {
-        "pic": '/images/iconUserInfo_sel.png',
-        "carCode": "京222222",
-        "tel": "33333333333"
-      },
-      {
-        "pic": '/images/lq_tx.png',
-        "carCode": "京3333333",
-        "tel": "66666666666"
-      },
-      {
-        "pic": '/images/iconHome_sel.png',
-        "carCode": "京4444444",
-        "tel": "55555555555"
-      },
-      {
-        "pic": '/images/phb_one.png',
-        "carCode": "京555555",
-        "tel": "44444444444"
-      },
-      {
-        "pic": '/images/phb_stree.png',
-        "carCode": "京888888",
-        "tel": "88888888888"
-      },
-    ]
-  },
-  onLoad: function () {
-    new app.globalData.MyUtils()
-  },
+    data: {
+        dataList: []
+    },
+    onLoad: function() {
+        new app.globalData.MyUtils()
+        this.setData({
+            userInfo: app.globalData.userInfo
+        })
+        this.getCodeList()
+    },
+    getCodeList() {
+        let self = this
+        let url = requestType['codeList']
+        requestType.genPromise({
+            url,
+            data: {
+                openid: self.data.userInfo.openid
+            },
+            method: 'POST'
+        }).then((success) => {
+            let data = success.data.data
+            if (data.order_list && data.order_list.length) {
+                self.setData({
+                    dataList: data.order_list
+                })
+            } else {
+                wx.showModal({
+                    title: '没有数据',
+                    content: '没有查询到数据列表',
+                    confirmText: '我知道了',
+                    showCancel: false,
+                    success: function() {
+                        self.utils.backPage()
+                    }
+                })
+            }
+        }, () => {
+
+        });
+    }
 })

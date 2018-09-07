@@ -35,21 +35,25 @@ Page({
         })
 
     },
+    user_id: null,
     onLoginFail() {
         //登陆失败
         this.utils.hideLoading()
     },
     onLoad: function(opt) {
+        console.log(opt)
+        this.user_id = opt.user_id ? opt.user_id : null
         new app.globalData.MyUtils()
         lm.instance().addObserver(this)
         let loginData = lm.instance().getUserInfo() || {}
+        console.log(loginData)
         if (!Object.keys(loginData).length) { //未登录
             this.utils.showLoading('登录中...')
-            lm.instance().login(opt.scene)
+            lm.instance().login(this.user_id)
         } else { //已登录
-            let num = this.data.userInfo.used
             this.setData({
-                itemArr: num.split('')
+                userInfo: loginData,
+                itemArr: String(loginData.used).split('')
             })
         }
     },
@@ -72,17 +76,16 @@ Page({
         })
     },
     getWxBindMobile(data) {
-        let url = requestType['CreateTestOrder']
+        let url = requestType['decryptMobile']
         requestType.genPromise({
             url,
             data: data,
             method: 'POST'
         }).then((success) => {
-            console.log(success)
-            this.utils.navigateTo('getMyTrial', { phone: '122323' })
+            let phoneNumber = success.data.data.phoneNumber
+            this.utils.navigateTo('getMyTrial', { phone: phoneNumber })
         }, () => {
             this.utils.toast('手机号码授权失败')
-            this.utils.navigateTo('getMyTrial', { phone: '122323' })
         });
     }
 })

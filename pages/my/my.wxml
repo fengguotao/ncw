@@ -11,11 +11,11 @@
 </view>
 <view class="tab">
     <view class="left" bindtap='order'>
-        <view class="one">0</view>
+        <view class="one">{{order_num}}</view>
         <view class="two">订单</view>
     </view>
     <view class="right" bindtap='moveCar'>
-        <view class="one">0</view>
+        <view class="one">{{ code_num }}</view>
         <view class="two">挪车码/张</view>
     </view>
 </view>
@@ -25,7 +25,7 @@
             <image src="/images/me_icon1.png"></image>
 
         </view>
-        <view class="item-right">
+        <view class="item-right" bindtap="openInvite">
             <view>邀请好友</view>
             <image src="/images/me_icon4.png"></image>
         </view>

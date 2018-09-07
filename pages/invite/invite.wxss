@@ -3,7 +3,7 @@
 page {
     width: 100%;
     height: 100%;
-    background-image: url(http://api.nuochewang.net/wximages/index_bg.png);
+    background-image: url(https://www.nuochewang.net/wximages/index_bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 20% 4% 0 4%;
@@ -13,7 +13,7 @@ page {
 .conter {
     width: 100%;
     height: 70%;
-    background-image: url(http://api.nuochewang.net/wximages/yqbg.png);
+    background-image: url(https://www.nuochewang.net/wximages/yqbg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* margin: 10% 2% 0 2%; */
@@ -108,4 +108,95 @@ page {
     margin: 0 30rpx;
     height: 35rpx;
     width: 20rpx
+}
+
+
+/* components/vipCouponAlert/vipCouponAlert.wxss */
+
+.vip-alert-warpper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.vip-coupon-alert-content {
+    width: 599rpx;
+    height: 1021rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.vip-coupon-alert-content .bgc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vip-coupon-alert-content .close {
+    position: absolute;
+    width: 42rpx;
+    height: 42rpx;
+    right: 20rpx;
+    top: 20rpx;
+    z-index: 100
+}
+
+.qrcored {
+    position: absolute;
+    width: 280rpx;
+    height: 280rpx;
+    right: 150rpx;
+    top: 380rpx;
+    z-index: 100
+}
+
+.saoyisao {
+    position: absolute;
+    width: 100%;
+    top: 660rpx;
+    z-index: 100;
+    color: #FFFFFF;
+    text-align: center;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 35rpx;
+}
+
+.baocun {
+    position: absolute;
+    top: 820rpx;
+    width: 80%;
+    height: 80rpx;
+    background: #ffef6a;
+    border-radius: 8rpx;
+    color: #de0016;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.tuijian {
+    position: absolute;
+    top: 920rpx;
+    width: 80%;
+    height: 80rpx;
+    background: #fefada;
+    border-radius: 8rpx;
+    color: #de0016;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }

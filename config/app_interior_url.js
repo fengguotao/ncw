@@ -16,5 +16,6 @@ const app_interior_url = { //应用内跳转
     nuoList: '/pages/nuoList/nuoList', //挪车码列表
     orderList: '/pages/orderList/orderList', //订单
     getMyTrial: '/pages/getMyTrial/getMyTrial', //体验-绑定车辆
+    drawCash: '/pages/drawCash/drawCash'
 }
 module.exports = app_interior_url

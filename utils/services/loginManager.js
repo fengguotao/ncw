@@ -42,7 +42,7 @@ var instance = (function() {
             if (res.errMsg === "login:ok") { //获取code成功，获取用户信息
                 _gmsLogin({
                     wxCode: res.code,
-                    scene: scene
+                    user_id: scene
                 })
             } else {
                 _triggerFailObserver()

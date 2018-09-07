@@ -7,7 +7,7 @@ page {
 .conter {
     height: 100%;
     width: 100%;
-    background-image: url(http://api.nuochewang.net/wximages/phb_bg.png);
+    background-image: url(https://www.nuochewang.net/wximages/phb_bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 380rpx 5% 0 5%;
@@ -53,7 +53,7 @@ page {
 
 .center {
     margin-top: -60rpx;
-    background-image: url(http://api.nuochewang.net/wximages/phgtop.png);
+    background-image: url(https://www./wximages/phgtop.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

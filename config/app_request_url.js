@@ -9,10 +9,20 @@ const appRequest = {
         AppSecret: 'd0e07b64d62c369882b23f7b594e90f5',
         /*接口------------------------------------------------ */
         login: `${host}/api/auth/login`, //登陆接口
-
+        getNum: `${host}/api/auth/getNum`,
         ranking: `${host}/api/ranking`, //排行榜
-        orderList: `${host}/api/order/list`, //创建邮寄订单
-        CreateTestOrder: `${host}/api/order/createTestOrder`, //创建体验码
+        orderList: `${host}/api/order/list`, //邮寄订单列表
+        codeList: `${host}/api/auth/codeList`,
+        decryptMobile: `${host}/api/auth/decryptMobile`, //解密手机号码
+        CreateOrder: `${host}/api/order/create`, //申请邮寄
+        CreateTestOrder: `${host}/api/auth/generateQR`, //创建体验码
+        // api/auth/generateQR
+        invite: `${host}/api/auth/invite`, //生成&获取邀请码
+        myincome: `${host}/api/auth/myincome`, //我的收益
+        tixian: `${host}/api/auth/tixian`, //提现
+
+        getCodeInfo: `${host}/api/auth/getCodeInfo`,
+        bindCode: `${host}/api/auth/bindCode`,
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return
@@ -23,6 +33,7 @@ const appRequest = {
                 method: map.method || 'POST',
                 header: map.header || { 'content-type': 'application/json;charset=UTF-8' }
             }
+
             return new Promise((resolve, reject) => {
                 const requestBody = {
                     url: data.url,

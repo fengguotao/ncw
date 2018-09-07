@@ -1,0 +1,278 @@
+.mryx-drawcash-conts .drawcash-title {
+    font-size: 28rpx;
+    color: #969696;
+    letter-spacing: 0;
+    line-height: 28rpx;
+    display: flex;
+}
+
+.mryx-drawcash-conts {
+    background-color: rgba(255, 255, 255);
+}
+
+.mryx-drawcash-conts .mryx-drawcash {
+    padding: 24rpx 30rpx 40rpx 30rpx;
+    background: #fff;
+}
+
+.mryx-drawcash-conts .drawcash-title image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.mryx-drawcash-conts .drawcash-title .money {
+    margin: 0 9rpx 0 15rpx;
+}
+
+.mryx-drawcash .drawcash-conts {
+    margin-top: 80rpx;
+}
+
+.mryx-drawcash .drawcash-conts .cont-list {
+    border-bottom: 1px solid #E6E6E6;
+    height: 90rpx;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.drawcash-conts .cont-list .input-money {
+    margin-left: 30rpx;
+    font-size: 80rpx;
+    color: #413427;
+    letter-spacing: 0;
+    line-height: 80rpx;
+    height: 80rpx;
+    margin-right: 112rpx;
+    vertical-align: middle;
+}
+
+.input-pcolor {
+    font-size: 32rpx;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 80rpx;
+}
+
+
+/*.drawcash-conts .cont-list .list-l {
+    align-items: center;
+}*/
+
+.drawcash-conts .cont-list .fuhao {
+    line-height: 80rpx;
+    float: left;
+}
+
+.drawcash-conts .btn {
+    font-size: 28rpx;
+    color: #C6C6C6;
+    letter-spacing: 0;
+    line-height: 80rpx;
+    height: 80rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.drawcash-conts .cont-tip {
+    font-size: 26rpx;
+    color: #AAAAAA;
+    letter-spacing: .65rpx;
+    line-height: 26rpx;
+    margin: 24rpx 0 0 0;
+}
+
+.drawcash-conts .cont-tip-wrong {
+    color: #FF4891;
+}
+
+.wechat-tip {
+    font-size: 26rpx;
+    color: #C6C6C6;
+    letter-spacing: .81rpx;
+    line-height: 30rpx;
+    margin: 24rpx 0 0 30rpx;
+}
+
+.drawcash-btn {
+    width: 560rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 30rpx;
+    letter-spacing: .94rpx;
+    margin: 86rpx auto 40rpx;
+    background: #ccc;
+    box-shadow: 0 2rpx 16rpx 0 rgba(195, 195, 195, 0.50);
+    border-radius: 100rpx;
+}
+
+.draw-active {
+    background: #FF4891;
+}
+
+.drawcash-detail {
+    font-size: 26rpx;
+    color: #969696;
+    letter-spacing: .81rpx;
+    line-height: 30rpx;
+    justify-content: center;
+}
+
+.pay-goto-mail {
+    margin-top: 70rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #FF4891;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-text {
+    font-size: 32rpx;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 52rpx;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+}
+
+.modal-detail {
+    font-size: 28rpx;
+    color: #969696;
+    letter-spacing: 0;
+    line-height: 35rpx;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+}
+
+.pay-page {
+    display: none;
+}
+
+.active-pay {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.pay-box {
+    position: relative;
+}
+
+page {
+    background-color: rgba(250, 250, 250, 1);
+}
+
+.close-btn {
+    width: 24rpx;
+    height: 24rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+}
+
+.pay-box .icon-cont,
+.tip-win .icon-cont {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.black-win {
+    position: relative;
+}
+
+.black-win .txt {
+    font-size: 28rpx;
+    color: #969696;
+    letter-spacing: 0;
+    line-height: 40rpx;
+}
+
+.black-win .txt .phone-concat {
+    color: #429BFF;
+}
+
+.tip-win {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+}
+
+.tip-active {
+    display: block;
+}
+
+.tip-win .blacklist-win {
+    width: 550rpx;
+    background: #fff;
+    padding: 0 30rpx;
+    border-radius: 30rpx;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.tip-win .blacklist-win .title {
+    margin-top: 40rpx;
+    margin-bottom: 60rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #4D4D4D;
+    letter-spacing: 0;
+}
+
+.tip-win .blacklist-win .txt {
+    font-size: 28rpx;
+    color: #969696;
+    letter-spacing: 0;
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.tip-win .blacklist-win .txt .phone-concat {
+    color: #429BFF;
+}
+
+.blacklist-win .sure {
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    margin-top: 60rpx;
+    font-size: 28rpx;
+    color: #FF4891;
+    border-top: 1px solid #E6E6E6;
+}
+
+.pay-title {
+    margin-left: 0;
+    text-align: center;
+}
+
+.draw-tip {
+    height: 700rpx;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.wetoast-global .wetoast__bd{
+    top:30%;
+    transform: translate3d(-50%,-30%,0)
+}

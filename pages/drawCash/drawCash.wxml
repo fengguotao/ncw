@@ -1,0 +1,58 @@
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
+<view class="mryx-drawcash-conts">
+
+    <view class="mryx-drawcash">
+        <view class="drawcash-title">
+            <text class="txt">当前可提现余额:</text>
+            <text class="money">¥{{blg_price}}</text>
+            <image src="/images/i_icon.png" bindtap="rechargeTip" mode="aspectFit"></image>
+        </view>
+
+        <view class="drawcash-conts">
+            <view class="cont-list">
+                <view class="list list-l">
+                    <text class="fuhao">¥</text>
+                    <input type="digit" name="" value="{{inputMoney}}" placeholder="点击输入金额" class="input-money" placeholder-class="input-pcolor" bindinput="getInputing"></input>
+                </view>
+                <view class="list btn" bindtap="drawAllCash">
+                    全部提现
+                </view>
+            </view>
+            <view class="cont-tip {{isWrongTip ? 'cont-tip-wrong':''}}">
+                {{tip}}
+            </view>
+        </view>
+    </view>
+
+    <!-- <view class="wechat-tip">仅支持提现到微信零钱</view> -->
+
+    <view class="drawcash-btn {{isTrue?'draw-active':''}}" bindtap="goToDraw">立即提现</view>
+
+    <!-- <view class="drawcash-detail flex" bindtap="drawDetail">提现明细</view> -->
+
+
+
+
+
+    <modal class="modal" hidden="{{modalHidden}}" title="提现规则" no-cancel="true" confirm-text="我知道啦" bindconfirm="rechargeTip">
+        <scroll-view scroll-y class="draw-tip">
+            <view class="modal-text">提现金额:</view>
+            <view class="modal-detail">单人单笔最少提现￥1.00元，最多提现￥2000.00元。仅微信实名认证用户可提现，提现金额实际到账时间以微信钱包通知时间为准。</view>
+
+
+            <view class="modal-text">提现次数:</view>
+            <view class="modal-detail">单人单日最多提现5次。</view>
+            <view class="modal-text">提现时间:</view>
+            <view class="modal-detail">任何时间都可提现。</view>
+            <view class="modal-text">到账时间:</view>
+            <view class="modal-detail">用户将钱转到微信钱包，预计3个工作日内到账。</view>
+            <view class="modal-text">提现用户:</view>
+            <view class="modal-detail">仅VIP用户可使用提现功能；当降为普通用户，则当前时段不能提现。当用户再次升级为VIP时，可再次使用提现功能。</view>
+            <view class="modal-text">黑名单用户:</view>
+            <view class="modal-detail">当用户因个人不当行为被列入黑名单，则累计消费金额及奖励金清零，也不能使用提现功能；当从黑名单中被解除，可再次使用提现功能。</view>
+        </scroll-view>
+    </modal>
+
+
+</view>

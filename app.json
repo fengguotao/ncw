@@ -13,7 +13,8 @@
         "pages/activityRules/activityRules",
         "pages/nuoList/nuoList",
         "pages/orderList/orderList",
-        "pages/getMyTrial/getMyTrial"
+        "pages/getMyTrial/getMyTrial",
+        "pages/drawCash/drawCash"
     ],
     "window": {
         "navigationBarBackgroundColor": "#3b5998",

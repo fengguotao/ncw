@@ -6,7 +6,7 @@
     <view class="toast-text">邀你赚赏金</view>
     <view class="btn">
         <view class="zreer"></view>
-        <view class="btn-text">点击查看活动详情</view>
+        <view class="btn-text" bindtap="openActivityRules">点击查看活动详情</view>
         <view class="zreer"></view>
     </view>
     <view class="witr-text-up">
@@ -16,13 +16,27 @@
         赏金上不封顶
     </view>
 </view>
-<view class="y-btn">
+<view class="y-btn" catchtap="shoWarpper">
     <text>立即赚赏金</text>
 </view>
-<view class="w-gomoney">
+<view class="w-gomoney" catchtap="openPutForward">
     <view class="left">
         <image src="/images/money.png"></image>
         <view></view>我的收益
     </view>
     <image class="right" src="/images/top_jtright.png"></image>
+</view>
+<view class="vip-alert-warpper" hidden="{{clickHidden}}">
+    <view class="vip-coupon-alert-content">
+        <image class="bgc" src="https://www.nuochewang.net/wximages/hbbg_s.png"></image>
+        <image src="../../images/close-white.png" bindtap="close" class="close"></image>
+        <image src="{{ qrcored }}" class="qrcored"></image>
+        <view class="saoyisao">打开微信扫一扫</view>
+        <view class="baocun" catchtap="baocun">
+            <text>保存到相册</text>
+        </view>
+        <button class="tuijian" open-type="share">
+            <text>推荐给朋友</text>
+        </button>
+    </view>
 </view>

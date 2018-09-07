@@ -29,19 +29,35 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
 					"name": "体验二维码",
-					"pathName": "pages/testSancode/testSancode",
-					"query": ""
+					"pathName": "pages/my/my",
+					"query": "user_id=123",
+					"scene": "1011"
+				},
+				{
+					"id": 1,
+					"name": "扫描挪车码",
+					"pathName": "pages/carCode/carCode",
+					"query": "code_id=1",
+					"scene": "1011"
 				},
 				{
 					"id": -1,
-					"name": "线上体验",
-					"pathName": "pages/getMyTrial/getMyTrial",
-					"query": ""
+					"name": "我的收益",
+					"pathName": "pages/putForward/putForward",
+					"query": "code_id=1",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "提现",
+					"pathName": "pages/drawCash/drawCash",
+					"query": "user_id=123",
+					"scene": "1011"
 				}
 			]
 		}

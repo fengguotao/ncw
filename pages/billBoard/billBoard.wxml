@@ -32,7 +32,7 @@
     </view>
 
     <view class="tbody" wx:for="{{rank_list}}" wx:key="item" wx:if="{{ index > 2 }}">
-        <view class="td-1">{{index}}</view>
+        <view class="td-1">{{index + 1 }}</view>
         <view class="td-2">{{ item.name }}</view>
         <view class="td-3">{{ item.car_brand }}</view>
         <view class="td-4">¥ {{ item.amount }}</view>
