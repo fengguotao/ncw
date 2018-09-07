@@ -14,7 +14,8 @@
         "pages/nuoList/nuoList",
         "pages/orderList/orderList",
         "pages/getMyTrial/getMyTrial",
-        "pages/drawCash/drawCash"
+        "pages/drawCash/drawCash",
+        "pages/bindCode/bindCode"
     ],
     "window": {
         "navigationBarBackgroundColor": "#3b5998",

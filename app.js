@@ -17,5 +17,7 @@ App({
     globalData: {
         userInfo: null,
         MyUtils,
+        serviceNum: '13522259154',
+        callOut: ['13522259154', '呼叫']
     }
 })

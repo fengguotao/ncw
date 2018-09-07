@@ -1,4 +1,4 @@
-// pages/getMyTrial/getMyTrial.js
+// pages/bindCode/bindCode.js
 const app = getApp()
 import requestType from '../../config/app_request_url.js'
 import Util from '../../utils/util.js'
@@ -27,7 +27,7 @@ Page({
         new app.globalData.MyUtils()
         this.setData({
             userInfo: app.globalData.userInfo,
-            oldPhone: options.phone
+            code_id: options.code_id
         })
     },
     changeCarNo() {
@@ -57,7 +57,8 @@ Page({
     e_online() {
         let self = this
         let data = {
-            openid: self.data.userInfo.openid
+            openid: self.data.userInfo.openid,
+            code_id: self.data.code_id
         }
         if (!self.data.carNum) {
             self.utils.toast('输入车牌号')
@@ -89,7 +90,8 @@ Page({
             success: function(res) {
 
                 if (res.confirm) {
-                    let url = requestType['CreateTestOrder']
+                    let url = requestType['bindCode']
+
                     requestType.genPromise({
                         url,
                         data: data,
@@ -97,17 +99,21 @@ Page({
                     }).then((success) => {
                         console.log(success)
                         if (success.data.state === 0) {
-                            self.utils.navigateTo('testSancode', success.data.data)
+                            self.utils.toast('车辆绑定成功！', () => {
+                                self.utils.reLaunch('index')
+                            })
                         } else {
-                            self.utils.toast('生成体验码失败')
+                            self.utils.toast('车辆绑定失败')
                         }
                     }, () => {
-                        self.utils.toast('生成体验码失败')
+                        self.utils.toast('车辆绑定失败')
                     });
                 } else if (res.cancel) {
                     console.log('用户点击取消')
                 }
             }
         })
-    }
+
+    },
+
 })

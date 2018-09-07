@@ -48,9 +48,53 @@ Page({
             method: 'POST'
         }).then((success) => {
             console.log(success)
-
+            let data = success.data.data
+            self.showModal(data)
         }, () => {
 
         });
-    }
+    },
+    showModal(data) {
+        let self = this
+        if (!data.is_bind && !data.is_self) {
+            wx.showModal({
+                title: '',
+                content: '二维码还没有绑定车辆',
+                confirmText: '去看看',
+                showCancel: false,
+                success: function() {
+                    self.utils.switchTab('index')
+                }
+            })
+        }
+        if (!data.is_bind && data.is_self) {
+            wx.showModal({
+                title: '',
+                content: '二维码还没有绑定车辆',
+                confirmText: '去绑定',
+                showCancel: false,
+                success: function() {
+                    self.utils.reLaunch('bindCode', { code_id: data.code_id })
+                }
+            })
+        }
+        if (data.is_bind && data.is_self) {
+            wx.showModal({
+                title: '',
+                content: '你不能扫描自己的二维码',
+                confirmText: '我知道了',
+                showCancel: false,
+                success: function() {
+
+                    // self.utils.switchTab('index')
+                    self.utils.reLaunch('bindCode', { code_id: data.code_id })
+                }
+            })
+        }
+        if (data.is_bind && !data.is_self) {
+            self.setData({
+                ...data
+            })
+        }
+    },
 })

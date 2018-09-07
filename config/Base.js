@@ -6,6 +6,19 @@ function MyUtils() {
     const pages = getCurrentPages()
     const curPage = pages[pages.length - 1]
     this.__page = curPage
+    this.__page.showActionSheet = function() {
+        wx.showActionSheet({
+            itemList: app.globalData.callOut,
+            success: function(res) {
+                wx.makePhoneCall({
+                    phoneNumber: app.globalData.serviceNum //仅为示例，并非真实的电话号码
+                })
+            },
+            fail: function(res) {
+                console.log(res.errMsg)
+            }
+        })
+    }
     curPage.utils = this
 }
 /****************************************************页面栈********************************************************/
