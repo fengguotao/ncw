@@ -81,7 +81,8 @@ page {
     height: 50rpx;
     line-height: 50rpx;
     font-size: 36rpx;
-    color: #333333;
+    color: red;
+    /* color: #333333; */
     text-align: center
 }
 

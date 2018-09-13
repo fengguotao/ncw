@@ -27,13 +27,40 @@ Page({
         console.log(userInfo)
             //登陆成功
         this.utils.hideLoading()
-
-        let num = String(userInfo.used)
+        let str = String(userInfo.used)
+        this.setItemArr(str)
         this.setData({
-            itemArr: num.split(''),
             userInfo: userInfo
         })
 
+    },
+    setItemArr(str) {
+        let len = str.length
+        switch (len) {
+            case 1:
+                str = '000000' + str
+                break;
+            case 2:
+                str = '00000' + str
+                break;
+            case 3:
+                str = '0000' + str
+                break;
+            case 4:
+                str = '000' + str
+                break;
+            case 5:
+                str = '00' + str
+                break;
+            case 6:
+                str = '0' + str
+                break;
+            default:
+                str = str
+        }
+        this.setData({
+            itemArr: str.split('')
+        })
     },
     user_id: null,
     onLoginFail() {
@@ -51,9 +78,9 @@ Page({
             this.utils.showLoading('登录中...')
             lm.instance().login(this.user_id)
         } else { //已登录
+            this.setItemArr(String(loginData.used))
             this.setData({
                 userInfo: loginData,
-                itemArr: String(loginData.used).split('')
             })
         }
     },

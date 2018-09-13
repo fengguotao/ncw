@@ -20,7 +20,7 @@ const appRequest = {
         invite: `${host}/api/auth/invite`, //生成&获取邀请码
         myincome: `${host}/api/auth/myincome`, //我的收益
         tixian: `${host}/api/auth/tixian`, //提现
-
+        delCode: `${host}/api/auth/delCode`,
         getCodeInfo: `${host}/api/auth/getCodeInfo`,
         bindCode: `${host}/api/auth/bindCode`,
         genPromise(map) {

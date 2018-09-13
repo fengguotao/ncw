@@ -131,16 +131,16 @@ page {
 }
 
 .btm {
-    height: 170rpx;
+    height: 190rpx;
     width: 100%;
     position: fixed;
     bottom: 0
 }
 
 .btm-text {
-    font-size: 20rpx;
+    font-size: 22rpx;
     padding: 0 30rpx;
-    height: 70rpx;
+    height: 90rpx;
 }
 
 .btm-btton {

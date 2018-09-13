@@ -14,14 +14,15 @@
         </view>
     </view>
     <view class="binding-conter-foot">
-        <input type="text" value="{{newPhone}}" bindinput="updatePhoneInput" placeholder="通知您绑定的手机号:{{oldPhone}}" />
+        <input type="text" value="{{newPhone}}" bindinput="updatePhoneInput" placeholder="您的联系电话:{{oldPhone}}" />
     </view>
 </view>
 <view class="binding-btn">
     <view class="btn" bindtap="e_online">确认生成</view>
 </view>
-<view class="service" bindtap="showActionSheet">
-    点击联系客服
+<view class="service">
+
+    <button type="default" open-type="contact" size="mini" class="button-view" hover-class="none">点击联系客服</button>
 </view>
 <view class="plate-number-all" hidden="{{itemHidden}}">
     <view class="plate-number-line">

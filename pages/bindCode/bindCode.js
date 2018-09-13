@@ -61,7 +61,7 @@ Page({
             code_id: self.data.code_id
         }
         if (!self.data.carNum) {
-            self.utils.toast('输入车牌号')
+            self.utils.toast('请完善您的车辆信')
             return
         }
 

@@ -8,19 +8,19 @@
                 <image class="icon" src="/images/phb_two.png"></image>
                 <view class="user-name">{{ rank_list[1].name }}</view>
                 <view class="user-card">{{ rank_list[1].car_brand }}</view>
-                <view class="user-pice">¥ {{ rank_list[1].amount }}</view>
+                <view class="user-pice">{{ rank_list[1].amount }}</view>
             </view>
             <view class="center">
                 <image class="icon" src="/images/phb_one.png"></image>
                 <view class="user-name">{{ rank_list[0].name }}</view>
                 <view class="user-card">{{ rank_list[0].car_brand }}</view>
-                <view class="user-pice">¥ {{ rank_list[0].amount }}</view>
+                <view class="user-pice">{{ rank_list[0].amount }}</view>
             </view>
             <view class="right">
                 <image class="icon" src="/images/phb_stree.png"></image>
                 <view class="user-name">{{ rank_list[2].name }}</view>
                 <view class="user-card">{{ rank_list[2].car_brand }}</view>
-                <view class="user-pice">¥ {{ rank_list[2].amount }}</view>
+                <view class="user-pice">{{ rank_list[2].amount }}</view>
             </view>
         </view>
     </view>
@@ -35,6 +35,6 @@
         <view class="td-1">{{index + 1 }}</view>
         <view class="td-2">{{ item.name }}</view>
         <view class="td-3">{{ item.car_brand }}</view>
-        <view class="td-4">¥ {{ item.amount }}</view>
+        <view class="td-4">{{ item.amount }}</view>
     </view>
 </view>

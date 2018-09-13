@@ -5,22 +5,22 @@
     <view class="item-list">
         <view class="item" wx:for="{{dataList}}" wx:key="item">
             <view class="item-left">
-                <image src="{{item.pic}}"></image>
+                <image src="{{item.url}}"></image>
             </view>
-            <view class="item-moddle">
+            <view class="item-moddle" data-qr_code_id="{{item.id}}" data-tiyan="{{item.tiyan}}" data-qr_code="{{item.url}}" bindtap="e_online">
                 <view>
                     <view class="item-moddle-txt">
-                        <view class="mod-code">{{item.carCode}}</view>
-                        <view class="txt-red">体验码</view>
+                        <view class="mod-code">{{item.car_no?item.car_no:'未绑定'}}</view>
+                        <view class="txt-red" wx:if="{{item.tiyan}}">体验码</view>
                     </view>
                     <view class="item-moddle-txt">
                         <view class="mod-txt">绑定手机：</view>
-                        <view class="mod-txt">{{item.tel}}</view>
+                        <view class="mod-txt">{{item.phone?item.phone:'未绑定'}}</view>
                     </view>
 
                 </view>
             </view>
-            <view class="item-right">
+            <view class="item-right" wx:if="{{item.tiyan}}">
                 <image src="/images/me_icon4.png"></image>
             </view>
         </view>

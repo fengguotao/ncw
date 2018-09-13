@@ -15,7 +15,9 @@
 <view class="btm">
     <view class="btm-btton">
         <button class="apply" catchtap="e_scanCode">申请邮寄</button>
-        <button class="del">删除体验码</button>
-        <view class="customer">点击联系客服</view>
+        <button class="del" bindtap="delCode">删除体验码</button>
+        <view class="customer">
+            <button type="default" open-type="contact" size="mini" class="button-view" hover-class="none">点击联系客服</button>
+        </view>
     </view>
 </view>

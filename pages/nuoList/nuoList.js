@@ -23,9 +23,9 @@ Page({
             method: 'POST'
         }).then((success) => {
             let data = success.data.data
-            if (data.order_list && data.order_list.length) {
+            if (data.list && data.list.length) {
                 self.setData({
-                    dataList: data.order_list
+                    dataList: data.list
                 })
             } else {
                 wx.showModal({
@@ -41,5 +41,14 @@ Page({
         }, () => {
 
         });
+    },
+    e_online(e) {
+        let self = this
+        console.log(e)
+        let data = e.currentTarget.dataset
+        if (!data.tiyan) {
+            return
+        }
+        self.utils.navigateTo('testSancode', data)
     }
 })

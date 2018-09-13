@@ -2,6 +2,9 @@
  wx:for="{{dataList}}"-->
 <import src="/template/wetoast/wetoast.wxml" />
 <template is="wetoast" data="{{...__wetoast__}}" />
+<wxs module="utils">
+    function numberToFix(value) { return value.toFixed(1) } module.exports.numberToFix = numberToFix
+</wxs>
 <scroll-view class="scroll-view" scroll-y="true">
     <view class="order-list" wx:for="{{orderList}}" wx:key="item">
         <view class="order-margin"></view>
@@ -13,7 +16,7 @@
             </view>
             <view class="order-btm">
                 <view class="order-btm-left">
-                    <image src="{{item.photo_url}}"></image>
+                    <image src="/images/nuo_img.png"></image>
                 </view>
                 <view class="order-btm-mod">
                     <view class="tit">挪车贴</view>
@@ -27,7 +30,7 @@
                     </view>
                 </view>
                 <view class="order-btm-right">
-                    <view>￥{{item.orderMoney}}</view>
+                    <view>￥{{utils.numberToFix(item.buy_num * 19.8)}}</view>
                 </view>
             </view>
         </view>

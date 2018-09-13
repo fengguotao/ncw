@@ -30,23 +30,23 @@
 
 <view class="buy-input">
     <view class="item-title">车辆品牌</view>
-    <input type="text" value="{{postJosn.fullName}}" bindinput="bindCarNo" />
+    <input type="text" value="{{postJosn.fullName}}" bindinput="bindCarNo" placeholder="请输入" />
 </view>
 <view class="buy-input">
     <view class="item-title">收件人</view>
-    <input type="text" value="{{postJosn.persoName}}" bindinput="bindPersoName" />
+    <input type="text" value="{{postJosn.persoName}}" bindinput="bindPersoName" placeholder="请输入" />
 </view>
 <view class="buy-input">
     <view class="item-title">收货地址</view>
-    <input type="text" value="{{postJosn.address}}" bindinput="bindAddress" />
+    <input type="text" value="{{postJosn.address}}" bindinput="bindAddress" placeholder="请输入" />
 </view>
 <view class="buy-input">
     <view class="item-title">联系电话</view>
-    <input type="number" value="{{postJosn.phone}}" bindinput="bindPhone" />
+    <input type="number" value="{{postJosn.phone}}" bindinput="bindPhone" placeholder="请输入" />
 </view>
 <view class="buy-input">
     <view class="item-title">备注</view>
-    <input type="text" value="{{postJosn.remak}}" bindinput="bindRemak" />
+    <input type="text" value="{{postJosn.remak}}" bindinput="bindRemak" placeholder="请输入" />
 </view>
 
 <view class="btm">

@@ -29,12 +29,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
 					"name": "体验二维码",
-					"pathName": "pages/my/my",
+					"pathName": "pages/bindCode/bindCode",
 					"query": "user_id=123",
 					"scene": "1011"
 				},
@@ -56,6 +56,13 @@
 					"id": -1,
 					"name": "提现",
 					"pathName": "pages/drawCash/drawCash",
+					"query": "user_id=123",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "购买挪车贴",
+					"pathName": "pages/getMyCard/getMyCard",
 					"query": "user_id=123",
 					"scene": "1011"
 				}

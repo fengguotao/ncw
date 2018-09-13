@@ -117,12 +117,12 @@ Page({
             self.utils.toast('请填写车辆品牌！')
             return
         }
-        if (!self.data.postJosn['address']) {
-            self.utils.toast('请填写收货地址！')
-            return
-        }
         if (!self.data.postJosn['persoName']) {
             self.utils.toast('请填写收件人姓名！')
+            return
+        }
+        if (!self.data.postJosn['address']) {
+            self.utils.toast('请填写收货地址！')
             return
         }
         if (!self.data.postJosn['phone']) {
@@ -142,16 +142,29 @@ Page({
             method: 'POST'
         }).then((success) => {
             console.log(success)
+            let data = success.data.data
+            let reqData = {
+                timeStamp: data.timeStamp + '',
+                nonceStr: data.nonceStr,
+                package: data.package,
+                signType: data.signType,
+                paySign: data.paySign,
+                appId: data.appId
+            }
+            self.requestPayment(reqData)
         }, () => {
             self.utils.toast('生成邮寄订单成功-  去支付')
         });
         console.log(self.data.postJosn)
     },
-    requestPayment() {
-        Util.requestPayment({}).then((res) => {
-            self.utils.toast('您已充值成功')
-                // self.utils.insideSkip('balance', {})
-            wx.navigateBack()
+    requestPayment(reqData) {
+        let self = this
+        Util.requestPayment(reqData).then((res) => {
+            self.utils.toast('您已充值成功', () => {
+                self.utils.navigateTo('nuoList')
+            })
+
+            // wx.navigateBack()
         }, (fail) => {
             //fail (detail message)	调用支付失败，其中 detail message 为后台返回的详细失败原因
             //fail cancel	用户取消支付

@@ -2,7 +2,7 @@
 <import src="/template/wetoast/wetoast.wxml" />
 <template is="wetoast" data="{{...__wetoast__}}" />
 <view class="content">
-    <view class="cont-text">累计收益（元）</view>
+    <view class="cont-text">累计收益(元)</view>
     <view class="money">{{income?income:'暂无收益'}}</view>
     <view>
         <button hover-class="none" class="applyPut {{income != '0.00'?'lanbei':''}}" bindtap="tixian">申请提现</button>

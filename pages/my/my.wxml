@@ -45,8 +45,8 @@
             <image src="/images/me_icon3.png"></image>
 
         </view>
-        <view class="item-right" bindtap="showActionSheet">
-            <view>联系客服</view>
+        <view class="item-right">
+            <button type="default" open-type="contact" size="mini" class="button-view" hover-class="none">联系客服</button>
             <!-- <image src="/images/me_icon4.png"></image> -->
         </view>
     </view>

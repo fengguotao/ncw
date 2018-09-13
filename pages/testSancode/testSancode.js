@@ -1,5 +1,6 @@
 // pages/testSancode/testSancode.js
 const app = getApp()
+import requestType from '../../config/app_request_url.js'
 Page({
 
     /**
@@ -24,6 +25,29 @@ Page({
     },
     e_scanCode() {
         this.utils.navigateTo('getMyCard')
+    },
+    delCode() {
+        let self = this
+        let url = requestType['delCode']
+        requestType.genPromise({
+            url,
+            data: {
+                openid: self.data.userInfo.openid,
+                qr_id: self.data.qr_code_id
+            },
+            method: 'POST'
+        }).then((success) => {
+            if (success.data.state === 0) {
+                self.utils.toast('删除体验码成功', () => {
+                    self.utils.backPage()
+                })
+            } else {
+                self.utils.toast(success.data.data.msg)
+            }
+
+        }, () => {
+            self.utils.toast('删除体验码失败')
+        });
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
