@@ -12,7 +12,14 @@
             <view class="order-top">
                 <view class="order-time">下单时间</view>
                 <view class="order-time">{{item.create_time}}</view>
-                <view class="{{item.status_name == '已成功' ? 'order-success':'order-unpay'}}">{{item.status_name}}</view>
+                <block wx:if="{{item.status_name == '待支付'}}">
+                    <view class="order-not-success" data-itemInfo="{{item}}" bindtap="orderCancel">取消订单</view>
+                    <view class="order-not-success" data-itemInfo="{{item}}" bindtap="orderPayAgin">继续支付</view>
+                </block>
+                <block wx:else>
+                    <view class="{{item.status_name == '支付成功' ? 'order-unpay':'order-success'}}">{{item.status_name}}</view>
+                </block>
+
             </view>
             <view class="order-btm">
                 <view class="order-btm-left">

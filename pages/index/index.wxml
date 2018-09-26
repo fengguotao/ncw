@@ -15,8 +15,11 @@
     <view class="car-owner">
         车主的选择
     </view>
-    <view class="btn">
+    <view class="btn" wx:if="{{userInfo.authorized}}">
         <button hover-class="none" catchtap="e_scanCode">领取我的挪车码</button>
+    </view>
+    <view class="btn" wx:else>
+        <button hover-class="none" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">领取我的挪车码</button>
     </view>
     <view class="experience">
         <button class="item-bg" hover-class="none" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">线上体验</button>

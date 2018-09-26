@@ -7,4 +7,30 @@
     <view>
         <button hover-class="none" class="applyPut {{income != '0.00'?'lanbei':''}}" bindtap="tixian">申请提现</button>
     </view>
+
+
+
+</view>
+<view class="incomeDetail">
+    <view class="Detail-title">
+        <view class="left">
+            <view class="big-text">{{incomeDetail.date}}</view>
+            <view class="small-text">收入 ¥{{incomeDetail.income}} 支出 ¥{{incomeDetail.outlay}}</view>
+        </view>
+        <view class="right" bindtap="showSheet">
+            <image src="/images/rili.png"></image>
+        </view>
+    </view>
+    <view class="Detail-list">
+        <view class="tbody" wx:for="{{incomeDetail.record}}" wx:key="item">
+            <view class="td-1">
+                <image class="avatarUrl" src="{{item.avatarUrl}}"></image>
+            </view>
+            <view class="td-2">
+                <view class="s-td-1">{{item.name}}</view>
+                <view class="s-td-2">{{item.time}}</view>
+            </view>
+            <view class="td-3">{{ item.amount }}</view>
+        </view>
+    </view>
 </view>

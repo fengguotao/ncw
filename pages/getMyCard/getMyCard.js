@@ -153,14 +153,14 @@ Page({
             }
             self.requestPayment(reqData)
         }, () => {
-            self.utils.toast('生成邮寄订单成功-  去支付')
+            self.utils.toast('生成邮寄订单失败')
         });
         console.log(self.data.postJosn)
     },
     requestPayment(reqData) {
         let self = this
         Util.requestPayment(reqData).then((res) => {
-            self.utils.toast('您已充值成功', () => {
+            self.utils.toast('您已支付成功', () => {
                 self.utils.navigateTo('nuoList')
             })
 

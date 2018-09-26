@@ -14,6 +14,7 @@ var instance = (function() {
     var _obj = null // 单例对象
 
     var _userInfo = {}
+    var _wxuserInfo = {}
         /**
          * 触发观察者的方法
          */
@@ -40,9 +41,18 @@ var instance = (function() {
     function _getUserInfo(scene) {
         wxApi.wxlogin().then((res) => { //获取微信code  
             if (res.errMsg === "login:ok") { //获取code成功，获取用户信息
-                _gmsLogin({
-                    wxCode: res.code,
-                    user_id: scene
+                wxApi.wxApi('getUserInfo').then((success) => {
+                    console.log(success)
+                    _gmsLogin({
+                        wxCode: res.code,
+                        userInfo: success.userInfo,
+                        user_id: scene
+                    })
+                }, (fail) => {
+                    _gmsLogin({
+                        wxCode: res.code,
+                        user_id: scene
+                    })
                 })
             } else {
                 _triggerFailObserver()

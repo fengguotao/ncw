@@ -19,10 +19,13 @@ const appRequest = {
         // api/auth/generateQR
         invite: `${host}/api/auth/invite`, //生成&获取邀请码
         myincome: `${host}/api/auth/myincome`, //我的收益
+        // income: `${host}/api/auth/income`, //我的收益
         tixian: `${host}/api/auth/tixian`, //提现
         delCode: `${host}/api/auth/delCode`,
         getCodeInfo: `${host}/api/auth/getCodeInfo`,
         bindCode: `${host}/api/auth/bindCode`,
+        orderPayAgin: `${host}/api/order/agin`,
+        orderCancel: `${host}/api/order/cancel`,
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return

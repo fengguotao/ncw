@@ -7,8 +7,8 @@ Page({
     data: {
         motto: 'Hello World',
         userInfo: {},
+        showAuthorized: false,
         itemArr: [],
-        hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     e_scanCode() {
@@ -32,7 +32,11 @@ Page({
         this.setData({
             userInfo: userInfo
         })
-
+        if (this.data.showAuthorized) {
+            this.utils.toast('授权成功', () => {
+                this.utils.navigateTo('getMyCard')
+            })
+        }
     },
     setItemArr(str) {
         let len = str.length
@@ -82,6 +86,15 @@ Page({
             this.setData({
                 userInfo: loginData,
             })
+        }
+    },
+    bindGetUserInfo(e) {
+        console.log(e.detail)
+        if (e.detail.errMsg === 'getUserInfo:ok') {
+            this.setData({
+                showAuthorized: true
+            })
+            lm.instance().login(this.user_id)
         }
     },
     getPhoneNumber(e) {

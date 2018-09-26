@@ -29,12 +29,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
 					"name": "体验二维码",
-					"pathName": "pages/bindCode/bindCode",
+					"pathName": "pages/index/index",
 					"query": "user_id=123",
 					"scene": "1011"
 				},
@@ -46,7 +46,7 @@
 					"scene": "1011"
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "我的收益",
 					"pathName": "pages/putForward/putForward",
 					"query": "code_id=1",
@@ -63,6 +63,13 @@
 					"id": -1,
 					"name": "购买挪车贴",
 					"pathName": "pages/getMyCard/getMyCard",
+					"query": "user_id=123",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "排行榜",
+					"pathName": "pages/billBoard/billBoard",
 					"query": "user_id=123",
 					"scene": "1011"
 				}

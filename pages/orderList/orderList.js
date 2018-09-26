@@ -1,6 +1,7 @@
 //pages/orderList/orderList.js
 const app = getApp()
 import requestType from '../../config/app_request_url.js'
+import Util from '../../utils/util'
 Page({
     data: {
         orderList: []
@@ -11,6 +12,81 @@ Page({
             userInfo: app.globalData.userInfo
         })
         this.getOrderList()
+    },
+    orderCancel(event) {
+        console.log(event.currentTarget.dataset.iteminfo)
+        let self = this
+        let url = requestType['orderCancel']
+        let itemIfo = event.currentTarget.dataset.iteminfo
+        wx.showModal({
+            // title: '没有数据',
+            content: '确定取消支付吗',
+            confirmText: '确定',
+            cancelText: '取消',
+            success: function(obj) {
+                if (obj.confirm) {
+                    console.log('用户确定取消支付')
+                    requestType.genPromise({
+                        url,
+                        data: {
+                            openid: self.data.userInfo.openid,
+                            order_num: itemIfo.order_num
+                        },
+                        method: 'POST'
+                    }).then((success) => {
+                        self.utils.toast('取消成功', () => {
+                            self.getOrderList()
+                        })
+                    }, () => {
+                        console.log('1111')
+
+                    });
+                }
+            }
+        })
+    },
+    orderPayAgin(event) {
+        console.log(event.currentTarget.dataset.iteminfo)
+        let self = this
+        let url = requestType['orderPayAgin']
+        let itemIfo = event.currentTarget.dataset.iteminfo
+        requestType.genPromise({
+            url,
+            data: {
+                openid: self.data.userInfo.openid,
+                order_num: itemIfo.order_num
+            },
+            method: 'POST'
+        }).then((success) => {
+            console.log(success)
+            let data = success.data.data
+            let reqData = {
+                timeStamp: data.timeStamp + '',
+                nonceStr: data.nonceStr,
+                package: data.package,
+                signType: data.signType,
+                paySign: data.paySign,
+                appId: data.appId
+            }
+            self.requestPayment(reqData)
+        }, () => {
+            console.log('1111')
+
+        });
+    },
+    requestPayment(reqData) {
+        let self = this
+        Util.requestPayment(reqData).then((res) => {
+            self.utils.toast('您已支付成功', () => {
+                self.getOrderList()
+            })
+
+            // wx.navigateBack()
+        }, (fail) => {
+            //fail (detail message)	调用支付失败，其中 detail message 为后台返回的详细失败原因
+            //fail cancel	用户取消支付
+            console.log("用户取消支付-----------")
+        })
     },
     getOrderList() {
         let self = this

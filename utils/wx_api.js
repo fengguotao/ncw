@@ -1,5 +1,9 @@
 import appInteriorUrl from '../config/app_interior_url'
 
+function wxApi(key) {
+    return wxGenPromise(key, {})
+}
+
 function login() {
     return wxGenPromise('login')
 }
@@ -100,6 +104,7 @@ function jumpPage(jumpKey, urlkey, skipData) {
 }
 /**内部方法 - 无需暴露end */
 module.exports = {
+    wxApi: wxApi,
     wxlogin: login,
     pageScrollTo: pageScrollTo,
     requestPayment: requestPayment,
