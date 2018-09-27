@@ -19,8 +19,9 @@ Page({
             date: "本月",
             income: 100,
             outlay: 100,
-            record: [{ "name": "百同学", "time": "158895658", "amount": "14.00", "avatarUrl": "https:\/\/www.nuochewang.net\/pppro\/20.jpg" }]
+            record: []
         },
+        //{ "name": "百同学", "time": "158895658", "amount": "14.00", "avatarUrl": "https:\/\/www.nuochewang.net\/pppro\/20.jpg" }
         money: "250.00"
     },
     onLoad: function() {
