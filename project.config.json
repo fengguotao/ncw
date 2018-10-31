@@ -29,20 +29,20 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 1,
 			"list": [
 				{
 					"id": 0,
 					"name": "体验二维码",
 					"pathName": "pages/index/index",
-					"query": "user_id=123",
+					"query": "user_id=60",
 					"scene": "1011"
 				},
 				{
 					"id": 1,
 					"name": "扫描挪车码",
 					"pathName": "pages/carCode/carCode",
-					"query": "code_id=2",
+					"query": "code_id=51",
 					"scene": "1011"
 				},
 				{
@@ -53,10 +53,10 @@
 					"scene": "1011"
 				},
 				{
-					"id": -1,
-					"name": "提现",
-					"pathName": "pages/drawCash/drawCash",
-					"query": "user_id=123",
+					"id": 3,
+					"name": "订单详情",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": "",
 					"scene": "1011"
 				},
 				{

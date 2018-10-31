@@ -13,6 +13,13 @@ Page({
         })
         this.getOrderList()
     },
+    orderDetail(event) {
+        let iteminfo = event.currentTarget.dataset.iteminfo
+        if (iteminfo.status_name === '支付成功') {
+            this.utils.navigateTo('orderDetail', { order_num: iteminfo.order_num })
+        }
+
+    },
     orderCancel(event) {
         console.log(event.currentTarget.dataset.iteminfo)
         let self = this
@@ -59,19 +66,26 @@ Page({
             method: 'POST'
         }).then((success) => {
             console.log(success)
-            let data = success.data.data
-            let reqData = {
-                timeStamp: data.timeStamp + '',
-                nonceStr: data.nonceStr,
-                package: data.package,
-                signType: data.signType,
-                paySign: data.paySign,
-                appId: data.appId
-            }
-            self.requestPayment(reqData)
-        }, () => {
-            console.log('1111')
+            if (!success.data.state) {
+                let data = success.data.data
+                let reqData = {
+                    timeStamp: data.timeStamp + '',
+                    nonceStr: data.nonceStr,
+                    package: data.package,
+                    signType: data.signType,
+                    paySign: data.paySign,
+                    appId: data.appId
+                }
+                self.requestPayment(reqData)
+            } else {
+                self.utils.toast('继续支付失败', () => {
 
+                })
+            }
+        }, () => {
+            self.utils.toast('继续支付失败', () => {
+
+            })
         });
     },
     requestPayment(reqData) {

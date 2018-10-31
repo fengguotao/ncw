@@ -223,7 +223,7 @@ MyUtils.prototype.takePhoto = function(data = { count: 1, sizeType: ['original',
 MyUtils.prototype.toast = function(txt, complete) {
         this.showToast({
             title: txt,
-            duration: 1500,
+            duration: 2000,
             success: typeof complete === 'function' ? complete : null
         })
     }

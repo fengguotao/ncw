@@ -3,7 +3,7 @@
 <template is="wetoast" data="{{...__wetoast__}}" />
 <view class="top">
     <view class="left">
-        <view class="code">{{carCode}}</view>
+        <view class="code">{{car_no}}</view>
         <view class="tips">临时停靠，请多关照</view>
     </view>
     <view class="right">
@@ -15,11 +15,12 @@
 <view class="content">
     <view class="cont-btton">
         <view class="tips">非常抱歉，临时停靠，通过下列方式通知我，我会马上来挪车，给你带来不便，请您谅解！ </view>
-        <button class="info">短消息通知车主</button>
-        <button class="notice">匿名电话通知</button>
+        <!-- <button class="info">短消息通知车主</button> -->
+        <button bindtap="makePhoneCall" class="info">匿名电话通知</button>
     </view>
 </view>
 
 <view class="btm">
-    <view>点击联系客服</view>
+    <!-- <view>点击联系客服</view> -->
+    <button type="default" open-type="contact" size="mini" class="button-view" hover-class="none">联系客服</button>
 </view>

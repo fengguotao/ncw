@@ -21,9 +21,9 @@
                 </block>
 
             </view>
-            <view class="order-btm">
+            <view class="order-btm" data-itemInfo="{{item}}" bindtap="orderDetail">
                 <view class="order-btm-left">
-                    <image src="/images/nuo_img.png"></image>
+                    <image src="{{item.photo_url}}"></image>
                 </view>
                 <view class="order-btm-mod">
                     <view class="tit">挪车贴</view>
@@ -37,7 +37,10 @@
                     </view>
                 </view>
                 <view class="order-btm-right">
-                    <view>￥{{utils.numberToFix(item.buy_num * 19.8)}}</view>
+                    <view class="price">￥{{item.price}}</view>
+                    <view class="status-model" wx:if="{{item.status_name == '支付成功'}}">
+                        <view class="oth-txt">{{item.send_status}}</view>
+                    </view>
                 </view>
             </view>
         </view>

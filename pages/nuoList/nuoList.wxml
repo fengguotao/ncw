@@ -19,10 +19,11 @@
                     </view>
 
                 </view>
+                <view class="item-right" wx:if="{{item.tiyan}}">
+                    <image src="/images/me_icon4.png"></image>
+                </view>
             </view>
-            <view class="item-right" wx:if="{{item.tiyan}}">
-                <image src="/images/me_icon4.png"></image>
-            </view>
+
         </view>
     </view>
 </scroll-view>

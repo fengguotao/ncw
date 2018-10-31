@@ -12,6 +12,13 @@ function pageScrollTo(reqData = {}) {
     return wxGenPromise('pageScrollTo', reqData)
 }
 
+function makePhoneCall(phoneNumber) {
+    let reqData = {
+        phoneNumber: phoneNumber
+    }
+    return wxGenPromise('makePhoneCall', reqData)
+}
+
 function requestPayment(reqData = {}) {
     // let reqData = {
     //     //小程序appid
@@ -108,6 +115,7 @@ module.exports = {
     wxlogin: login,
     pageScrollTo: pageScrollTo,
     requestPayment: requestPayment,
+    makePhoneCall: makePhoneCall,
     navigateTo: navigateTo,
     redirectTo: redirectTo,
     reLaunch: reLaunch,

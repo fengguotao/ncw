@@ -1,0 +1,59 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class="order-detail">
+    <view class="order-no">
+        订单编号: {{ orderInfo.order_num}}
+    </view>
+    <view class="san-code">
+        <view class="q-code-icon">
+            <image src="https://www.nuochewang.net/123.png "></image>
+        </view>
+        <view class="q-code-detail">
+            <view class="big-text">
+                <view class="text-title">挪车贴</view>
+                <view class="text-money">¥ {{orderInfo.price}}</view>
+            </view>
+            <view class="samll-text"><text space="nbsp">购买数量     {{orderInfo.buy_num}}</text></view>
+            <view class="samll-text"><text space="nbsp">联系电话     {{orderInfo.contact_phone}}</text></view>
+        </view>
+    </view>
+    <view class="order-minute">
+        <view class="minute-item">
+            <view class="item"><text space="nbsp">下单时间：     {{orderInfo.create_time}}</text></view>
+            <view class="item"><text space="nbsp">付款时间：     {{orderInfo.pay_time}}</text></view>
+            <view class="item"><text space="nbsp">发货时间：     {{orderInfo.send_status === '已发货'?orderInfo.send_time:'--'}}</text></view>
+        </view>
+    </view>
+</view>
+<view class="user-detail">
+    <view class="user-icon">
+        <image src="/images/user-l-icon.png"></image>
+    </view>
+    <view class="user-minute">
+        <view class="user-name">
+            <view class="name">{{orderInfo.name}}</view>
+            <view class="phone">{{orderInfo.contact_phone}}</view>
+        </view>
+        <view class="user-address"><text space="nbsp">{{ orderInfo.address}}</text></view>
+    </view>
+</view>
+<view class="express-detail" wx:if="{{orderInfo.send_status === '已发货'}}">
+    <view class="express-no"><text space="nbsp">快递单号     </text>{{ orderInfo.number}}</view>
+    <view class="express-service">
+        <view><text space="nbsp">{{orderInfo.delivery_name}}快递     </text></view>
+        <view bindtap="makePhoneCall">
+            <image src="/images/phone-icon.png"></image> {{orderInfo.phone}}
+        </view>
+    </view>
+</view>
+
+<view class="logistics" wx:if="{{orderInfo.send_status === '已发货'}}">
+    <view class="flow-item" wx:for="{{orderInfo.delivery}}" wx:key="item">
+        <view class="item-describe{{index?'':'-index'}}">{{item.AcceptStation}}</view>
+        <view class="item-time"><text space="nbsp">{{item.AcceptTime}}</text></view>
+        <image class="index-false" wx:if="{{!index}}" src="/images/index-false.png"></image>
+        <image class="index-true" wx:else src="/images/index-true.png"></image>
+    </view>
+    <view class="no-delivery" wx:if="{{!orderInfo.delivery.length}}">
+        暂无物流信息
+    </view>
+</view>

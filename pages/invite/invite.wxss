@@ -3,16 +3,17 @@
 page {
     width: 100%;
     height: 100%;
+    background: rgb(45, 68, 134);
     background-image: url(https://www.nuochewang.net/wximages/index_bg.png);
     background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 20% 4% 0 4%;
+    background-size: 100% 100%;
+    padding: 20% 7.5rpx 0 7.5rpx;
     box-sizing: border-box;
 }
 
 .conter {
     width: 100%;
-    height: 70%;
+    height: 717rpx;
     background-image: url(https://www.nuochewang.net/wximages/yqbg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -31,7 +32,7 @@ page {
 }
 
 .btn {
-    margin: 20rpx auto;
+    margin: 40rpx auto;
     height: 50rpx;
     width: 300rpx;
     border: #e14538 solid 1rpx;
@@ -59,7 +60,7 @@ page {
 }
 
 .witr-text-up {
-    margin-top: 220rpx;
+    margin-top: 175rpx;
 }
 
 .witr-text-up,
@@ -73,7 +74,7 @@ page {
 .y-btn {
     width: 80%;
     height: 96rpx;
-    margin-top: 40rpx;
+    margin-top: 60rpx;
     margin-left: 10%;
     background: #ffef6a;
     border-radius: 8rpx;
@@ -84,7 +85,8 @@ page {
 }
 
 .w-gomoney {
-    width: 100%;
+    margin-left: 3%;
+    width: 94%;
     height: 96rpx;
     background: #FFFFFF;
     margin-top: 40rpx;
@@ -129,7 +131,7 @@ page {
 }
 
 .vip-coupon-alert-content {
-    width: 599rpx;
+    width: 670rpx;
     height: 1021rpx;
     display: flex;
     flex-direction: column;
@@ -149,26 +151,27 @@ page {
     position: absolute;
     width: 42rpx;
     height: 42rpx;
-    right: 20rpx;
+    right: 42rpx;
     top: 20rpx;
     z-index: 100
 }
 
 .qrcored {
     position: absolute;
-    width: 280rpx;
-    height: 280rpx;
-    right: 150rpx;
-    top: 380rpx;
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 75rpx;
+    right: 260rpx;
+    top: 450rpx;
     z-index: 100
 }
 
 .saoyisao {
     position: absolute;
     width: 100%;
-    top: 660rpx;
+    top: 625rpx;
     z-index: 100;
-    color: #FFFFFF;
+    color: #ff9db7;
     text-align: center;
     height: 50rpx;
     line-height: 50rpx;
@@ -177,12 +180,12 @@ page {
 
 .baocun {
     position: absolute;
-    top: 820rpx;
+    top: 760rpx;
     width: 80%;
     height: 80rpx;
-    background: #ffef6a;
+    background: #cc0031;
     border-radius: 8rpx;
-    color: #de0016;
+    color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center
@@ -190,10 +193,10 @@ page {
 
 .tuijian {
     position: absolute;
-    top: 920rpx;
+    top: 870rpx;
     width: 80%;
     height: 80rpx;
-    background: #fefada;
+    background: #ffd41a;
     border-radius: 8rpx;
     color: #de0016;
     display: flex;

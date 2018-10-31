@@ -5,7 +5,9 @@ import requestType from '../../config/app_request_url.js'
 const lm = require('../../utils/services/loginManager')
 Page({
     data: {
-        carCode: "京N111111"
+        car_no: "",
+        code_id: null,
+        hidephone: null
     },
     onLoginSuccess(userInfo) {
         console.log(userInfo)
@@ -33,6 +35,9 @@ Page({
             this.utils.showLoading('登录中...')
             lm.instance().login()
         } else { //已登录
+            this.setData({
+                userInfo: loginData,
+            })
             this.getCodeInfo()
         }
     },
@@ -56,18 +61,27 @@ Page({
     },
     showModal(data) {
         let self = this
-        if (!data.is_bind && !data.is_self) {
+        self.setData({
+            // "code_id":data.code_id,
+            // "is_self":data.is_self,
+            // "is_bind":data.is_bind,
+            // "car_no":data.car_no,
+            // "phone":data.phone,
+            // "hidephone":data.hidephone
+            ...data
+        })
+        if (!data.is_bind && !data.code_id) {
             wx.showModal({
                 title: '',
-                content: '二维码还没有绑定车辆',
-                confirmText: '去看看',
+                content: '二维码已经过期',
+                confirmText: '随便看看',
                 showCancel: false,
                 success: function() {
                     self.utils.switchTab('index')
                 }
             })
         }
-        if (!data.is_bind && data.is_self) {
+        if (!data.is_bind && data.code_id) {
             wx.showModal({
                 title: '',
                 content: '二维码还没有绑定车辆',
@@ -85,16 +99,14 @@ Page({
                 confirmText: '我知道了',
                 showCancel: false,
                 success: function() {
-
-                    // self.utils.switchTab('index')
-                    self.utils.reLaunch('bindCode', { code_id: data.code_id })
+                    self.utils.switchTab('index')
                 }
             })
         }
-        if (data.is_bind && !data.is_self) {
-            self.setData({
-                ...data
-            })
-        }
     },
+    //点击客服
+    makePhoneCall() {
+        const that = this
+        Util.makePhoneCall(that.data.hidephone)
+    }
 })

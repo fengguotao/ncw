@@ -33,5 +33,6 @@ module.exports = {
     regExpPhoneNum: regExpPhoneNum,
     isLicenseNo: isLicenseNo,
     wxlogin: wxApi.wxlogin,
+    makePhoneCall: wxApi.makePhoneCall,
     requestPayment: wxApi.requestPayment
 }

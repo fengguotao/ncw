@@ -113,10 +113,10 @@ Page({
     giveMyCard() {
         let self = this
         let url = requestType['CreateOrder']
-        if (!self.data.postJosn['CarNo']) {
-            self.utils.toast('请填写车辆品牌！')
-            return
-        }
+            // if (!self.data.postJosn['CarNo']) {
+            //     self.utils.toast('请填写车辆品牌！')
+            //     return
+            // }
         if (!self.data.postJosn['persoName']) {
             self.utils.toast('请填写收件人姓名！')
             return

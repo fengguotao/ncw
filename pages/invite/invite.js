@@ -32,7 +32,7 @@ Page({
         })
     },
     shoWarpper() {
-        console.log('11111')
+        // console.log('11111')
         let self = this
         if (!self.data.postData) {
             self.getInvite(false)

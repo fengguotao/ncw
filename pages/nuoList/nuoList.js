@@ -47,6 +47,7 @@ Page({
         console.log(e)
         let data = e.currentTarget.dataset
         if (!data.tiyan) {
+            self.utils.toast('请收到车贴后扫描车贴进行绑定，已绑定的请忽略。')
             return
         }
         self.utils.navigateTo('testSancode', data)

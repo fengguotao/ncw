@@ -15,6 +15,7 @@
         "pages/orderList/orderList",
         "pages/getMyTrial/getMyTrial",
         "pages/drawCash/drawCash",
+        "pages/orderDetail/orderDetail",
         "pages/bindCode/bindCode"
     ],
     "window": {

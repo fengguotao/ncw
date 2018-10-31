@@ -12,6 +12,11 @@ page {
     background: rgb(44, 68, 135);
 }
 
+.wetoast__bd {
+    min-width: 70%;
+    left: 50%;
+}
+
 .binding-top-text {
     height: 300rpx;
     line-height: 300rpx;

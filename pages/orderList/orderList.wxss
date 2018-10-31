@@ -123,7 +123,21 @@ page {
     text-align: left;
 }
 
-.order-btm .order-btm-right image {
+.price {
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: left;
+}
+
+.status-model {
+    height: 100rpx;
+    text-align: left;
+    display: flex;
+    align-items: flex-end
+}
+
+
+/* .order-btm .order-btm-right image {
     height: 90rpx;
     width: 90rpx
-}
+} */

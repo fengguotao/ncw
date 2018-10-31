@@ -99,3 +99,18 @@ page {
     text-align: center;
     font-size: 32rpx;
 }
+
+.button-view {
+    background: #eceef3;
+}
+
+.button-view::after {
+    border: none;
+    outline: none;
+}
+
+button[size=mini] {
+    background: #eceef3;
+    color: #333333;
+    padding: 0;
+}

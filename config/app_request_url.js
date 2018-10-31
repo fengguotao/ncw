@@ -26,6 +26,8 @@ const appRequest = {
         bindCode: `${host}/api/auth/bindCode`,
         orderPayAgin: `${host}/api/order/agin`,
         orderCancel: `${host}/api/order/cancel`,
+        question: `${host}/api/auth/question`,
+        orderInfo: `${host}/api/order/info`,
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return

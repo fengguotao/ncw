@@ -87,7 +87,6 @@ Page({
             content: `手机号${data.phone}\r\n车牌号${self.data.carNum}`,
 
             success: function(res) {
-
                 if (res.confirm) {
                     let url = requestType['CreateTestOrder']
                     requestType.genPromise({
@@ -99,7 +98,7 @@ Page({
                         if (success.data.state === 0) {
                             self.utils.navigateTo('testSancode', success.data.data)
                         } else {
-                            self.utils.toast('生成体验码失败')
+                            self.utils.toast(success.data.data.msg)
                         }
                     }, () => {
                         self.utils.toast('生成体验码失败')
