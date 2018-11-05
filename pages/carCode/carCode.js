@@ -5,6 +5,7 @@ import requestType from '../../config/app_request_url.js'
 const lm = require('../../utils/services/loginManager')
 Page({
     data: {
+        showAuthorized: false,
         car_no: "",
         code_id: null,
         hidephone: null
@@ -18,7 +19,17 @@ Page({
             itemArr: num.split(''),
             userInfo: userInfo
         })
-        this.getCodeInfo()
+        if (this.data.showAuthorized) {
+            this.utils.toast('授权成功', () => {
+                this.utils.navigateTo('getMyCard')
+            })
+        } else {
+            this.getCodeInfo()
+        }
+
+    },
+    e_scanCode() {
+        this.utils.navigateTo('getMyCard')
     },
     user_id: null,
     onLoginFail() {
@@ -102,6 +113,15 @@ Page({
                     self.utils.switchTab('index')
                 }
             })
+        }
+    },
+    bindGetUserInfo(e) {
+        console.log(e.detail)
+        if (e.detail.errMsg === 'getUserInfo:ok') {
+            this.setData({
+                showAuthorized: true
+            })
+            lm.instance().login(this.user_id)
         }
     },
     //点击客服

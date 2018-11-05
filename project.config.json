@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
@@ -54,8 +54,8 @@
 				},
 				{
 					"id": 3,
-					"name": "订单详情",
-					"pathName": "pages/orderDetail/orderDetail",
+					"name": "排行榜",
+					"pathName": "pages/billBoard/billBoard",
 					"query": "",
 					"scene": "1011"
 				},
@@ -67,9 +67,9 @@
 					"scene": "1011"
 				},
 				{
-					"id": -1,
-					"name": "排行榜",
-					"pathName": "pages/billBoard/billBoard",
+					"id": 5,
+					"name": "取现",
+					"pathName": "pages/drawCash/drawCash",
 					"query": "user_id=123",
 					"scene": "1011"
 				}

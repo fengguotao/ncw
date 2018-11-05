@@ -38,7 +38,7 @@
     <modal class="modal" hidden="{{modalHidden}}" title="提现规则" no-cancel="true" confirm-text="我知道啦" bindconfirm="rechargeTip">
         <scroll-view scroll-y class="draw-tip">
             <view class="modal-text">提现金额:</view>
-            <view class="modal-detail">单人单笔最少提现￥1.00元，最多提现￥2000.00元。仅微信实名认证用户可提现，提现金额实际到账时间以微信钱包通知时间为准。</view>
+            <view class="modal-detail">单人单笔最少提现￥10.00元，最多提现￥2000.00元。仅微信实名认证用户可提现，提现金额实际到账时间以微信钱包通知时间为准。</view>
 
 
             <view class="modal-text">提现次数:</view>

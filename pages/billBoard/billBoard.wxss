@@ -37,16 +37,18 @@ page {
 
 .left .icon,
 .right .icon {
-    height: 118rpx;
-    width: 126rpx;
-    margin-left: 35%;
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 100rpx;
+    margin-left: 28%;
     margin-top: 40rpx
 }
 
 .center .icon {
-    height: 131rpx;
-    width: 132rpx;
-    margin-left: 30%;
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 100rpx;
+    margin-left: 28%;
     margin-top: 40rpx;
     margin-bottom: 47rpx
 }

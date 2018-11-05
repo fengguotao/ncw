@@ -5,7 +5,7 @@
     </view>
     <view class="san-code">
         <view class="q-code-icon">
-            <image src="https://www.nuochewang.net/123.png "></image>
+            <image src="{{ orderInfo.photo_url }}"></image>
         </view>
         <view class="q-code-detail">
             <view class="big-text">

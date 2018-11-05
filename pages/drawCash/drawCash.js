@@ -5,12 +5,12 @@ Page({
         loadingHidden: true,
         modalHidden: true,
         blackListWin: true,
-        blg_price: '0.00',
+        blg_price: '10.00',
         isWrongTip: false,
         isTrue: false,
         inputMoney: '',
-        lowPrice: 1,
-        tip: '单次最低提现金额为¥1.00，最高提现金额为¥2000.00',
+        lowPrice: 10,
+        tip: '单次最低提现金额为¥10.00，最高提现金额为¥2000.00',
         highPrice: 2000,
         loadingTxt: '',
         isSetPayPwd: false,
@@ -222,7 +222,7 @@ Page({
                 break;
             default:
                 this.setData({
-                    tip: '单次最低提现金额为¥1.00，最高提现金额为¥2000.00',
+                    tip: '单次最低提现金额为¥10.00，最高提现金额为¥2000.00',
                     isWrongTip: false,
                     isTrue: true
                 })
