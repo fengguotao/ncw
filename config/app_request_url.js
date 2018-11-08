@@ -2,7 +2,7 @@
  * 小程序网络请求配置文件
  */
 
-const host = 'https://www.nuochewang.net' // 
+const host = 'https://m.nuochewang.net' // 
     // 测试环境 
 const appRequest = {
         AppID: 'wx9eaa37645a723075',

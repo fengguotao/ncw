@@ -84,7 +84,7 @@ Page({
         }
         wx.showModal({
             title: '是否把手机号和车牌号绑定',
-            content: `手机号${data.phone}\r\n车牌号${self.data.carNum}`,
+            content: `手机号${data.phone}\r\n车牌号${data.carNo}`,
 
             success: function(res) {
                 if (res.confirm) {

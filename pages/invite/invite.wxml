@@ -28,7 +28,7 @@
 </view>
 <view class="vip-alert-warpper" hidden="{{clickHidden}}">
     <view class="vip-coupon-alert-content">
-        <image class="bgc" src="https://www.nuochewang.net/wximages/hbbg_s.png"></image>
+        <image class="bgc" src="http://img.nuochewang.net/wximages/hbbg_s.png"></image>
         <image src="../../images/close-white.png" bindtap="close" class="close"></image>
         <image src="{{ qrcored }}" class="qrcored"></image>
         <view class="saoyisao">打开微信扫一扫</view>

@@ -12,7 +12,7 @@ Page({
         test: {
             "order_num": "100046",
             "status_name": "支付成功",
-            "photo_url": "https://www.nuochewang.net/123.png",
+            "photo_url": "http://img.nuochewang.net/123.png",
             "buy_num": "1",
             "contact_phone": "15885258525",
             "address": "北京市朝阳区三里河",
