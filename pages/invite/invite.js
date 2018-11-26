@@ -50,33 +50,44 @@ Page({
             mask: true
         })
         let self = this
-        wx.getImageInfo({
-            src: self.data.invite,
-            success: function(data) {
-                console.log(data)
-                wx.saveImageToPhotosAlbum({
-                    filePath: data.path,
-                    success: function() {
-                        wx.hideLoading()
-                        wx.showModal({
-                            title: '保存成功',
-                            content: '您可以在发朋友圈时，在微信相册中选择这张图片分享出去',
-                            showCancel: false,
-                            confirmText: '我知道了'
+        wx.authorize({
+            scope: "scope.writePhotosAlbum",
+            success: () => {
+                wx.getImageInfo({
+                    src: self.data.invite,
+                    success: function(data) {
+                        console.log(data)
+                        wx.saveImageToPhotosAlbum({
+                            filePath: data.path,
+                            success: function() {
+                                wx.hideLoading()
+                                wx.showModal({
+                                    title: '保存成功',
+                                    content: '您可以在发朋友圈时，在微信相册中选择这张图片分享出去',
+                                    showCancel: false,
+                                    confirmText: '我知道了'
+                                })
+                            },
+                            fail: function(err) {
+                                console.log(err);
+                                wx.hideLoading()
+                            }
                         })
                     },
                     fail: function(err) {
-                        console.log(err);
+                        console.log(err)
                         wx.hideLoading()
                     }
                 })
-
-
             },
-            fail: function(err) {
-                console.log(err)
+            fail: () => {
+                wx.hideLoading()
+                wx.showToast({
+                    icon: "none",
+                    title: "获取相册权限失败，请在右上角设置给予权限后重新尝试！",
+                });
             }
-        })
+        });
 
     },
     /**
