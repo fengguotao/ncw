@@ -1,52 +1,54 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/faqList/faqList",
-        "pages/my/my",
-        "pages/getMyCard/getMyCard",
-        "pages/billBoard/billBoard",
-        "pages/testSancode/testSancode",
-        "pages/carCode/carCode",
-        "pages/invite/invite",
-        "pages/logs/logs",
-        "pages/putForward/putForward",
-        "pages/activityRules/activityRules",
-        "pages/nuoList/nuoList",
-        "pages/orderList/orderList",
-        "pages/getMyTrial/getMyTrial",
-        "pages/drawCash/drawCash",
-        "pages/orderDetail/orderDetail",
-        "pages/bindCode/bindCode"
-    ],
-    "window": {
-        "navigationBarBackgroundColor": "#3b5998",
-        "navigationBarTitleText": "挪车网",
-        "navigationBarTextStyle": "white",
-        "enablePullDownRefresh": false
-    },
-    "tabBar": {
-        "backgroundColor": "#FFFFFF",
-        "selectedColor": "#3b5998",
-        "borderStyle": "black",
-        "color": "#999999",
-        "list": [{
-                "pagePath": "pages/index/index",
-                "text": "挪车码",
-                "iconPath": "images/bot_icon01.png",
-                "selectedIconPath": "images/bot_icon01_h.png"
-            },
-            {
-                "pagePath": "pages/my/my",
-                "text": "我的",
-                "iconPath": "images/bot_icon02.png",
-                "selectedIconPath": "images/bot_icon02_h.png"
-            },
-            {
-                "pagePath": "pages/billBoard/billBoard",
-                "text": "排行榜",
-                "iconPath": "images/bot_icon03.png",
-                "selectedIconPath": "images/bot_icon03_h.png"
-            }
-        ]
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/faqList/faqList",
+    "pages/my/my",
+    "pages/getMyCard/getMyCard",
+    "pages/billBoard/billBoard",
+    "pages/testSancode/testSancode",
+    "pages/carCode/carCode",
+    "pages/invite/invite",
+    "pages/logs/logs",
+    "pages/putForward/putForward",
+    "pages/activityRules/activityRules",
+    "pages/nuoList/nuoList",
+    "pages/orderList/orderList",
+    "pages/getMyTrial/getMyTrial",
+    "pages/drawCash/drawCash",
+    "pages/orderDetail/orderDetail",
+    "pages/bindCode/bindCode"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#3b5998",
+    "navigationBarTitleText": "挪车网",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#3b5998",
+    "borderStyle": "black",
+    "color": "#999999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "挪车码",
+        "iconPath": "images/bot_icon01.png",
+        "selectedIconPath": "images/bot_icon01_h.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/bot_icon02.png",
+        "selectedIconPath": "images/bot_icon02_h.png"
+      },
+      {
+        "pagePath": "pages/billBoard/billBoard",
+        "text": "排行榜",
+        "iconPath": "images/bot_icon03.png",
+        "selectedIconPath": "images/bot_icon03_h.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

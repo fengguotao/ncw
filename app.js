@@ -1,4 +1,4 @@
-//app.js
+//app.js ****
 const MyUtils = require('/config/Base.js')
 App({
     onLaunch: function() {
