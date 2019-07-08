@@ -11,7 +11,7 @@
         <view class="text">
             <view class="big">挪车贴</view>
             <view class="small">材质： 可移除不干胶</view>
-            <view class="small">尺寸：70mm*70mm</view>
+            <view class="small">尺寸：75mm*75mm</view>
         </view>
     </view>
 
@@ -50,7 +50,8 @@
 </view>
 
 <view class="btm">
-    <view class="btm-text">注：收到挪车码后请您先扫描进行绑定车辆和手机信息，绑定后方可使用，如有疑问请查看<text bindtap="openFqa">常见问题</text></view>
+    <view class="btm-text">注：1、收到挪车码后请您先扫描进行绑定车辆和手机信息，绑定后方可使用，如有疑问请联系客服。</view>
+    <view class="btm-text">2、淘宝购买请访问 www.nuochewang.net</view>
     <view class="btm-btton">
         <view class="left">年费：{{totalPrices}}元</view>
         <view class="right" bindtap="giveMyCard">立即申请</view>

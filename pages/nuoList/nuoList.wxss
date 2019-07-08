@@ -39,7 +39,7 @@ page {
 }
 
 .item-moddle {
-    flex-basis: 70%;
+    flex-basis: 80%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -49,20 +49,25 @@ page {
     border-bottom: 1rpx solid #eeeeee
 }
 
+.item-moddle-txt-top {
+    display: flex;
+    justify-content: space-between;
+}
+
 .item-moddle-txt .mod-txt {
     float: left;
 }
 
 .item-moddle-txt .mod-code {
-    width: 180rpx;
+    width: 170rpx;
     display: inline-block;
 }
 
 .item-moddle-txt .txt-red {
-    color: #fff;
-    margin-left: 30rpx;
+    color: #a2a3a4;
+    /* margin-left: 30rpx; */
     display: inline-block;
-    background-color: #f4160a;
+    /* background-color: #f4160a; */
 }
 
 .item-right image {

@@ -29,7 +29,8 @@ Page({
 
     },
     e_scanCode() {
-        this.utils.navigateTo('getMyCard')
+        // this.utils.navigateTo('getMyCard')
+        this.utils.switchTab('index')
     },
     user_id: null,
     onLoginFail() {

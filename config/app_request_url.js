@@ -28,6 +28,12 @@ const appRequest = {
         orderCancel: `${host}/api/order/cancel`,
         question: `${host}/api/auth/question`,
         orderInfo: `${host}/api/order/info`,
+        getPrice: `${host}/api/order/getPrice`,
+
+        resetCode: `${host}/api/auth/resetCode`,
+        renewal: `${host}/api/order/renewal`,
+
+
         genPromise(map) {
             if (!map || (typeof map === "object" && !map.url)) {
                 return

@@ -1,0 +1,22 @@
+<!--pages/testSancode/testSancode.wxml-->
+<import src="/template/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
+<view class="content">
+    <view class="img">
+        <view class="nuo-tit">入会日期 {{start_time}}</view>
+        <view class="nuo-grey">会员有效期至 {{end_time}}</view>
+        <image src="{{qr_code}}"></image>
+    </view>
+    <view class="text">
+        <view class="text-grey">请于会籍到期前一个月内尽快续费, 立即续费仅需 {{totalPrices}}元/年</view>
+    </view>
+</view>
+<view class="btm">
+    <view class="btm-btton">
+        <button class="apply" catchtap="e_scanCode">支付¥{{totalPrices}}元/年续费</button>
+        <button class="del" bindtap="delCode">重置绑定信息</button>
+        <view class="customer">
+            <button type="default" open-type="contact" size="mini" class="button-view" hover-class="none">点击联系客服</button>
+        </view>
+    </view>
+</view>

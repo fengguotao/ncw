@@ -19,5 +19,6 @@ const app_interior_url = { //应用内跳转
     drawCash: '/pages/drawCash/drawCash',
     bindCode: '/pages/bindCode/bindCode',
     orderDetail: '/pages/orderDetail/orderDetail',
+    cardDetail: '/pages/cardDetail/cardDetail',
 }
 module.exports = app_interior_url

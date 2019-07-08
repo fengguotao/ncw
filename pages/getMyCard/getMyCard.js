@@ -82,10 +82,23 @@ Page({
         })
     },
     calculate() {
-        this.setData({
-            totalPrices: (this.data.unitPrice * this.data.postJosn.CarNum).toFixed(2)
-        })
-        console.log(this.data.totalPrices)
+        let self = this
+        let url = requestType['getPrice']
+        requestType.genPromise({
+            url,
+            data: { CarNum: self.data.postJosn.CarNum, type: 1 },
+            method: 'POST'
+        }).then((success) => {
+            console.log(success)
+            let data = success.data.data
+            self.setData({
+                totalPrices: data.price.toFixed(2)
+            })
+        }, () => {
+            self.utils.toast('生成邮寄订单失败')
+        });
+
+        // console.log(this.data.totalPrices)
     },
     openFqa() {
         this.utils.navigateTo('faqList')

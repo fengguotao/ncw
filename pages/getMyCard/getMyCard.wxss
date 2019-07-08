@@ -131,7 +131,7 @@ page {
 }
 
 .btm {
-    height: 190rpx;
+    height: 240rpx;
     width: 100%;
     position: fixed;
     bottom: 0
@@ -140,7 +140,7 @@ page {
 .btm-text {
     font-size: 22rpx;
     padding: 0 30rpx;
-    height: 90rpx;
+    height: 70rpx;
 }
 
 .btm-btton {

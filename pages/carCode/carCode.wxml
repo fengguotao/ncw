@@ -17,8 +17,8 @@
         <view class="tips">非常抱歉，临时停靠，通过下列方式通知我，我会马上来挪车，给你带来不便，请您谅解！ </view>
 
         <button bindtap="makePhoneCall" class="info">匿名电话通知</button>
-        <button wx:if="{{userInfo.authorized}}" hover-class="none" catchtap="e_scanCode" class="notice">领取我的挪车码</button>
-        <button wx:else hover-class="none" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="notice">领取我的挪车码</button>
+        <button hover-class="none" catchtap="e_scanCode" class="notice">领取我的挪车码</button>
+        <!-- <button  wx:if="{{userInfo.authorized}}" wx:else hover-class="none" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="notice">领取我的挪车码</button> -->
 
     </view>
 </view>
