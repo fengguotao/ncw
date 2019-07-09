@@ -45,7 +45,7 @@ Page({
     bindcarNumInput(event) {
         let content = event.detail.value
         this.setData({
-            carNum: content,
+            carNum: content.toUpperCase(),
         })
     },
     updatePhoneInput(event) {
