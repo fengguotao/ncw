@@ -111,7 +111,7 @@ page {
     margin: 0;
     background: none;
     border: #FFFFFF;
-    width: 100%;
+    width: 70%;
     color: #333333;
     text-align: left;
 }

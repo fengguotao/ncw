@@ -99,26 +99,36 @@ Page({
     },
     delCode() {
         let self = this
-        let url = requestType['resetCode']
-        requestType.genPromise({
-            url,
-            data: {
-                openid: self.data.userInfo.openid,
-                qr_id: self.data.qr_code_id
-            },
-            method: 'POST'
-        }).then((success) => {
-            if (success.data.state === 0) {
-                self.utils.toast('重置绑定信息成功', () => {
-                    self.utils.navigateTo('bindCode', { code_id: self.data.qr_code_id })
-                })
-            } else {
-                self.utils.toast(success.data.data.msg)
-            }
+        wx.showModal({
+            title: '确定重置绑定信息吗？',
+            content: `重置信息将清空当前绑定资料，您可通过重新扫码绑定新的资料继续使用`,
+            success: function(res) {
+                if (res.confirm) {
+                    let url = requestType['resetCode']
+                    requestType.genPromise({
+                        url,
+                        data: {
+                            openid: self.data.userInfo.openid,
+                            qr_id: self.data.qr_code_id
+                        },
+                        method: 'POST'
+                    }).then((success) => {
+                        if (success.data.state === 0) {
+                            self.utils.toast('重置绑定信息成功', () => {
+                                self.utils.navigateTo('bindCode', { code_id: self.data.qr_code_id })
+                            })
+                        } else {
+                            self.utils.toast(success.data.data.msg)
+                        }
 
-        }, () => {
-            self.utils.toast('重置绑定信息失败')
-        });
+                    }, () => {
+                        self.utils.toast('重置绑定信息失败')
+                    });
+                } else if (res.cancel) {
+                    console.log('用户点击取消')
+                }
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

@@ -51,7 +51,7 @@ page {
 
 .item-moddle-txt-top {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .item-moddle-txt .mod-txt {
@@ -59,7 +59,7 @@ page {
 }
 
 .item-moddle-txt .mod-code {
-    width: 170rpx;
+    width: 150rpx;
     display: inline-block;
 }
 
