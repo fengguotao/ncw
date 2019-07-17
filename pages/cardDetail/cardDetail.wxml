@@ -5,7 +5,9 @@
     <view class="img">
         <view class="nuo-tit">入会日期 {{start_time}}</view>
         <view class="nuo-grey">会员有效期至 {{end_time}}</view>
-        <image src="{{qr_code}}"></image>
+        <view class="qrCodebj">
+            <image src="{{qr_code}}"></image>
+        </view>
     </view>
     <view class="text">
         <view class="text-grey">请于会籍到期前一个月内尽快续费, 立即续费仅需 {{totalPrices}}元/年</view>

@@ -50,11 +50,14 @@ Page({
         console.log(e)
         let data = e.currentTarget.dataset
         if (!data.tiyan) {
-
-            self.utils.navigateTo('cardDetail', data)
-                // self.utils.toast('请收到车贴后扫描车贴进行绑定，已绑定的请忽略。')
-            return
+            if (!data.car_no) {
+                self.utils.toast('请收到车贴后扫描车贴进行绑定，如需帮助联系客服。')
+            } else {
+                self.utils.navigateTo('cardDetail', data)
+            }
+        } else {
+            self.utils.navigateTo('testSancode', data)
         }
-        self.utils.navigateTo('testSancode', data)
+
     }
 })

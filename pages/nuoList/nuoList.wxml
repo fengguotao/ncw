@@ -7,7 +7,7 @@
             <view class="item-left">
                 <image src="{{item.url_1}}"></image>
             </view>
-            <view class="item-moddle" data-qr_code_id="{{item.id}}" data-start_time="{{item.start_time}}" data-end_time="{{item.end_time}}" data-tiyan="{{item.tiyan}}" data-qr_code="{{item.url}}" bindtap="e_online">
+            <view class="item-moddle" data-car_no="{{item.car_no}}" data-qr_code_id="{{item.id}}" data-start_time="{{item.start_time}}" data-end_time="{{item.end_time}}" data-tiyan="{{item.tiyan}}" data-qr_code="{{item.url}}" bindtap="e_online">
                 <view style="width: 85%;">
                     <view class="item-moddle-txt item-moddle-txt-top">
                         <view class="mod-code">{{item.car_no?item.car_no:'未绑定'}}</view>

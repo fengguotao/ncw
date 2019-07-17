@@ -6,7 +6,7 @@ page {
 
 .content {
     width: 100%;
-    height: 840rpx;
+    height: 880rpx;
     text-align: center;
 }
 
@@ -26,15 +26,24 @@ page {
     line-height: 128rpx;
 }
 
-.img image {
-    width: 54%;
-    height: 410rpx;
-    margin-bottom: 69rpx;
+.img .qrCodebj {
+    margin-left: 125rpx;
+    height: 500rpx;
+    width: 500rpx;
+    background-image: url(http://img.nuochewang.net/777.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.qrCodebj image {
+    width: 280rpx;
+    height: 280rpx;
+    margin-top: 110rpx;
 }
 
 .text {
     width: 95%;
-    margin: 0 auto;
+    margin-top: 40rpx;
 }
 
 .text-grey {

@@ -115,7 +115,7 @@ Page({
                     }).then((success) => {
                         if (success.data.state === 0) {
                             self.utils.toast('重置绑定信息成功', () => {
-                                self.utils.navigateTo('bindCode', { code_id: self.data.qr_code_id })
+                                self.utils.redirectTo('bindCode', { code_id: self.data.qr_code_id })
                             })
                         } else {
                             self.utils.toast(success.data.data.msg)
